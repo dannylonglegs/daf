@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Home from "./pages/Home";
 import MaggiePeach from "./pages/MaggiePeach";
+import AppLayout from "./AppLayout";
 
 export default function AnimatedRoutes() {
   const location = useLocation();
@@ -9,6 +10,7 @@ export default function AnimatedRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
+        <Route element={<AppLayout />}>
         <Route
           path="/"
           element={
@@ -33,6 +35,7 @@ export default function AnimatedRoutes() {
             </motion.div>
           }
         />
+        </Route>
       </Routes>
     </AnimatePresence>
   );
