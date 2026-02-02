@@ -5,7 +5,7 @@ import WorkNav from "../components/WorkNav";
 export default function Home() {
 
   return (
-      <div  className="flex flex-col">
+      <div  className="flex flex-col m-4">
         <motion.header
           initial={{ opacity: 0, x: 48 }}
           animate={{ opacity: 1, x: 0 }}
