@@ -19,6 +19,16 @@ body {
 
 @layer components {
   .page-wrapper {
-    @apply min-h-dvh w-full flex flex-col p-4;
+    @apply h-dvh flex flex-col overflow-hidden;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

@@ -17,21 +17,22 @@ type SwiperProps = {
 const Swiper: React.FC<SwiperProps> = ({
   images,
   slidesPerView = 2,
-  spaceBetween = 50,
+  spaceBetween = 0,
   className = "",
 }) => {
 
-    console.log("images",images)
   return (
     <SwiperRoot
       modules={[Navigation, Pagination, Autoplay]}
       spaceBetween={spaceBetween}
       slidesPerView={slidesPerView}
-      navigation
-      pagination={{ clickable: true }}
+        navigation={{
+            nextEl: '.custom-swiper-button-next',
+            prevEl: '.custom-swiper-button-prev',
+        }}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper: SwiperType) => console.log(swiper)}
-      className={className}
+      className={`${className}` + ` `}
     >
       {images.map((src, i) => (
         <SwiperSlide key={src}>
@@ -44,6 +45,12 @@ const Swiper: React.FC<SwiperProps> = ({
           />
         </SwiperSlide>
       ))}
+        <div style={{ filter: "url(#glow)", color: "grey" }} className="custom-swiper-button-prev absolute bottom-2 left-2 z-10 cursor-pointer text-4xl text-white">
+            ← 
+       </div>
+        <div style={{ filter: "url(#glow)", color: "grey" }} className="custom-swiper-button-next absolute bottom-2 right-2 z-10 cursor-pointer text-4xl text-white">
+            →
+         </div>
     </SwiperRoot>
   );
 };
