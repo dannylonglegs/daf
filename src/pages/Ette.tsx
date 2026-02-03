@@ -1,7 +1,12 @@
 import WorkPageLayout from "../components/WorkPageLayout";
 
 const etteImages: string[] = [
-  "/dc/dc001.png",
+  "/e/ette01.png",
+  "/e/ette02.png",
+  "/e/ette03.png",
+  "/e/ette04.png",
+  "/e/ette05.png",
+  "/e/ette06.png",
 ];
 
 export default function Ette() {

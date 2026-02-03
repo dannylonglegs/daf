@@ -107,10 +107,12 @@ export default function WorkPageLayout({ title, images, children }: Props) {
 
                 <div className="">
                   <Swiper
+                    key={`${isOpen}-${startIndex}`}
                     images={images}
                     slidesPerView={2}
                     spaceBetween={50}
-                    // initialSlide={startIndex}
+                    onClose={close}
+                    initialSlide={startIndex}
                   />
                 </div>
               </div>
