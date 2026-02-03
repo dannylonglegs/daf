@@ -1,15 +1,19 @@
 import WorkPageLayout from "../components/WorkPageLayout";
 
-const maggiePeachImages: string[] = [
-  "/dc/dc001.png",
+const materialMattersImages: string[] = [
+  "/mm/mm001.png",
+  "/mm/mm002.png",
+  "/mm/mm003.png",
+  "/mm/mm004.png",
+  "/mm/mm005.png",
 ];
 
-export default function MaggiePeach() {
+export default function MaterialMatters() {
   return (
     <WorkPageLayout 
-      title="Maggie Peach" 
-      images={maggiePeachImages}
-      >
+      title="Material Matters" 
+      images={materialMattersImages}
+    >
       <div className="text-lg space-y-4 max-w-[700px]">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et dignissim libero, at eleifend augue...

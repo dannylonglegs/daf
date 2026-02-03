@@ -1,15 +1,15 @@
 import WorkPageLayout from "../components/WorkPageLayout";
 
-const maggiePeachImages: string[] = [
+const etteImages: string[] = [
   "/dc/dc001.png",
 ];
 
-export default function MaggiePeach() {
+export default function Ette() {
   return (
     <WorkPageLayout 
-      title="Maggie Peach" 
-      images={maggiePeachImages}
-      >
+      title="Ette" 
+      images={etteImages}
+    >
       <div className="text-lg space-y-4 max-w-[700px]">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et dignissim libero, at eleifend augue...

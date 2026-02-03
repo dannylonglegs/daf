@@ -17,6 +17,19 @@ body {
   filter: none !important;
 }
 
+.nav {
+  will-change: transform, opacity;
+}
+
+.nav-enter {
+  animation: navEnter 420ms ease-in-out both;
+}
+
+@keyframes navEnter {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 @layer components {
   .page-wrapper {
     @apply h-dvh flex flex-col overflow-hidden;
