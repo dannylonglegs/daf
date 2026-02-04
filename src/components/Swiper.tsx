@@ -53,11 +53,11 @@ const Swiper: React.FC<SwiperProps> = ({
         <button onClick={(e) => {
           e.stopPropagation();
           onClose();
-        }} style={{ filter: "url(#glow)", color: "grey" }} className="absolute top-2 right-2 z-10 cursor-pointer text-[48px] bg-white border-1 hover:blur-[1px] transition-all duration-200">X</button>
-        <div style={{ filter: "url(#glow)", color: "grey" }} className="custom-swiper-button-prev absolute bottom-2 left-2 z-10 cursor-pointer text-[48px] bg-white border-1 hover:blur-[1px] transition-all duration-200">
+        }} style={{ filter: "url(#glow)", color: "grey" }} className="h-12 w-12 flex flex-col justify-center absolute top-2 right-2 z-10 cursor-pointer text-[36px] bg-white border-1 hover:blur-[1px] transition-all duration-200">X</button>
+        <div style={{ filter: "url(#glow)", color: "grey" }} className="h-12 w-12 flex flex-col justify-center custom-swiper-button-prev absolute bottom-2 left-2 z-10 cursor-pointer text-[48px] bg-white border-1 hover:blur-[1px] transition-all duration-200">
             ← 
        </div>
-        <div style={{ filter: "url(#glow)", color: "grey" }} className="custom-swiper-button-next absolute bottom-2 right-2 z-10 cursor-pointer text-[48px] cursor-pointer text-[48px] bg-white border-1 hover:blur-[1px] transition-all duration-200">
+        <div style={{ filter: "url(#glow)", color: "grey" }} className="h-12 w-12 flex flex-col justify-center custom-swiper-button-next absolute bottom-2 right-2 z-10 cursor-pointer text-[48px] cursor-pointer text-[48px] bg-white border-1 hover:blur-[1px] transition-all duration-200">
             →
          </div>
     </SwiperRoot>

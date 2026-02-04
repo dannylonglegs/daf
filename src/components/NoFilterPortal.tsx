@@ -63,7 +63,6 @@ export default function NoFilterPortal({
 
   return (
     <>
-      {/* This defines the measured box. Control width/max-width/centering here. */}
       <div ref={placeholderRef} className={placeholderClassName} />
       {mount ? createPortal(children, mount) : null}
     </>

@@ -50,7 +50,7 @@ export default function WorkPageLayout({ title, images, children }: Props) {
         transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
       >
          <h1 className="text-4xl pt-4">{title}</h1>
-        <section className="flex-1 min-h-0 overflow-y-auto">
+        <section className=" min-h-0 overflow-y-auto">
             {children}
         </section>
 
@@ -110,7 +110,7 @@ export default function WorkPageLayout({ title, images, children }: Props) {
                     key={`${isOpen}-${startIndex}`}
                     images={images}
                     slidesPerView={2}
-                    spaceBetween={50}
+                    spaceBetween={16}
                     onClose={close}
                     initialSlide={startIndex}
                   />
