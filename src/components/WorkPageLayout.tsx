@@ -88,7 +88,7 @@ export default function WorkPageLayout({ title, images, children }: Props) {
               onClick={close}
             />
             <motion.div
-              className="fixed inset-0 flex items-center justify-center p-4"
+              className="fixed bg-white/70 inset-0 flex items-center justify-center p-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
