@@ -14,6 +14,7 @@ type SwiperProps = {
   className?: string;
   onClose: () => void; 
   initialSlide?: number;
+  breakpoints?: Record<number, any>;
 };
 
 const Swiper: React.FC<SwiperProps> = ({
@@ -23,6 +24,7 @@ const Swiper: React.FC<SwiperProps> = ({
   className = "",
   onClose,
   initialSlide = 0,
+  breakpoints
 }) => {
 
   return (
@@ -31,6 +33,7 @@ const Swiper: React.FC<SwiperProps> = ({
       spaceBetween={spaceBetween}
       slidesPerView={slidesPerView}
       initialSlide={initialSlide} 
+      breakpoints={breakpoints}
         navigation={{
             nextEl: '.custom-swiper-button-next',
             prevEl: '.custom-swiper-button-prev',

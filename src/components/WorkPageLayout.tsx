@@ -113,6 +113,10 @@ export default function WorkPageLayout({ title, images, children }: Props) {
                     spaceBetween={16}
                     onClose={close}
                     initialSlide={startIndex}
+                    breakpoints={{
+                        0:   { slidesPerView: 1},
+                        768: { slidesPerView: 2 },
+                    }}
                   />
                 </div>
               </div>
