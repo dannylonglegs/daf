@@ -15,7 +15,7 @@ export default function Home() {
           <img className="scale-[110%] md:max-w-[50%] hover:blur-[.5px] transition-all duration-200 cursor-pointer" src="/hd007.png" alt="Header Image" />
         </motion.header>
         <motion.p
-          className="text-2xl mb-24"
+          className="text-2xl mb-24 max-w-[700px]"
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 0 }}
