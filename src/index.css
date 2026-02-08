@@ -25,6 +25,12 @@ body {
   animation: navEnter 420ms ease-in-out both;
 }
 
+.custom-swiper-button-prev.is-disabled,
+.custom-swiper-button-next.is-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
 @keyframes navEnter {
   from { opacity: 0; transform: translateY(-10px); }
   to   { opacity: 1; transform: translateY(0); }

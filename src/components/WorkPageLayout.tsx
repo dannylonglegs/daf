@@ -43,18 +43,18 @@ export default function WorkPageLayout({ title, images, children }: Props) {
       <WorkNav />
 
       <motion.div
-        className="flex flex-col flex-1 min-h-0"
+        className="flex flex-col flex-1 min-h-0 overflow-y-auto z-0 pb-8 no-scrollbar" 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
       >
-         <h1 className="text-4xl pt-4">{title}</h1>
-        <section className=" min-h-0 overflow-y-auto">
+         <h1 className="text-4xl pt-8 pb-4">{title}</h1>
+        <section className=" ">
             {children}
         </section>
 
-        <div className="mb-10 grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2 max-w-[900px]">
+        <div className="mt-10 mb-10 grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2 max-w-[900px]">
           {images.map((src, idx) => (
             <button
               key={src}
@@ -97,14 +97,6 @@ export default function WorkPageLayout({ title, images, children }: Props) {
                 className="w-full max-w-[1100px]"
                 onClick={(e) => e.stopPropagation()}
               >
-                {/* <button
-                  type="button"
-                  onClick={close}
-                  className="mb-2 inline-block bg-white px-3 py-1 text-black hover:bg-white transition"
-                >
-                  X
-                </button> */}
-
                 <div className="">
                   <Swiper
                     key={`${isOpen}-${startIndex}`}

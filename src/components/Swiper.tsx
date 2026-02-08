@@ -37,6 +37,7 @@ const Swiper: React.FC<SwiperProps> = ({
         navigation={{
             nextEl: '.custom-swiper-button-next',
             prevEl: '.custom-swiper-button-prev',
+            disabledClass: "is-disabled",
         }}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper: SwiperType) => console.log(swiper)}

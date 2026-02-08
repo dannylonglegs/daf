@@ -15,9 +15,16 @@ export default function MaterialMatters() {
       images={materialMattersImages}
     >
       <div className="text-lg space-y-4 max-w-[700px]">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et dignissim libero, at eleifend augue...
-        </p>
+        {/* <h2>Material Matters — Research Website</h2> */}
+
+            <p>
+            Website for Material Matters, a research initiative at Emily Carr University of Art and Design.
+            </p>
+
+            <p>
+            Consulted on UI/UX and developed the site with GatsbyJS and Contentful CMS. Designed a sortable homepage layout with intentional blank space to create visual rhythm, and trained the team to manage content independently.
+            </p>
+
       </div>
     </WorkPageLayout>
   );

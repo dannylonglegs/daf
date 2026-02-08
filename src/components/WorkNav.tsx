@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 
 const linkClasses =
-  "inline-block whitespace-nowrap bg-white p-1 text-2xl transform hover:blur-[1px] transition-all duration-200 cursor-pointer mr-3";
+  "inline-block whitespace-nowrap z-20 bg-white p-1 text-2xl transform hover:blur-[1px] transition-all duration-200 cursor-pointer mr-3";
 
 export default function WorkNav() {
   // const location = useLocation();

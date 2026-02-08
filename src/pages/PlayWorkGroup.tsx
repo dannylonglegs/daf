@@ -16,8 +16,12 @@ export default function PlayWorkGroup() {
       images={playWorkGroupImages}
     >
       <div className="text-lg space-y-4 max-w-[700px]">
+        <h2 className="text-xl">Novos Growth Partners & Apollo Care Corporate Websites</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et dignissim libero, at eleifend augue...
+        Two informational healthcare websites built with a NYC agency for Chicago-based pharma company Novos Growth Partners and its subsidiary Apollo Care.
+        </p>
+        <p>
+        Led primary development using Next.js and Contentful. Focused on clean, professional design, strong content flow, and SEO-friendly architecture.
         </p>
       </div>
     </WorkPageLayout>

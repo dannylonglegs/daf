@@ -15,9 +15,15 @@ export default function DanseCite() {
   return (
     <WorkPageLayout title="Danse-Cité" images={danseCiteImages}>
       <div className="text-lg space-y-4 max-w-[700px]">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et dignissim libero, at eleifend augue...
-        </p>
+        <h2 className="text-xl ">Danse-Cité 40th Anniversary Rebrand and Website</h2>
+          <p>
+          Full visual and website redesign for contemporary dance company Danse-Cité’s 40th anniversary, including updated branding, visual language, and digital presence.
+          </p>
+
+          <p>
+          Developed the site using Next.js and Contentful CMS, based on branding by Steven Steffen and web/UI design created collaboratively as a duo. Built a modern, highly navigable experience featuring a sortable archive of 40 years of performances, and trained the team to manage content independently.
+          </p>
+
       </div>
     </WorkPageLayout>
   );
