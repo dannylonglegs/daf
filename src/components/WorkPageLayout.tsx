@@ -1,4 +1,5 @@
-import { ReactNode, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import type { ReactNode } from "react";
 import NoFilterPortal from "../components/NoFilterPortal";
 import Swiper from "../components/Swiper";
 import WorkNav from "../components/WorkNav";

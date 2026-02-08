@@ -1,10 +1,11 @@
-import { ReactNode, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
+import type { ReactNode } from "react";
 import { createPortal } from "react-dom";
 
 type Props = {
   children: ReactNode;
-  className?: string; // applied to the portaled mount element
-  placeholderClassName?: string; // applied to the in-flow placeholder
+  className?: string; 
+  placeholderClassName?: string; 
 };
 
 export default function NoFilterPortal({
@@ -39,16 +40,14 @@ export default function NoFilterPortal({
       m.style.left = `${rect.left}px`;
       m.style.top = `${rect.top}px`;
       m.style.width = `${rect.width}px`;
-
-      // IMPORTANT: don't force height from placeholder (often 0px)
-      // Let content determine height.
       m.style.height = "";
     };
 
     updatePosition();
 
     const ro = new ResizeObserver(updatePosition);
-    ro.observe(placeholderRef.current);
+    const ph = placeholderRef.current;
+    if (ph) ro.observe(ph);
 
     window.addEventListener("resize", updatePosition);
 

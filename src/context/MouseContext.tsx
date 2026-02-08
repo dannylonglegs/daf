@@ -1,11 +1,11 @@
-import React, {
+import {
   createContext,
   useContext,
   useEffect,
   useMemo,
   useState,
-  ReactNode,
 } from "react";
+import type { ReactNode } from "react";
 
 type MousePosition = { x: number; y: number };
 type Normalized = { normalizedX: number; normalizedX2: number; normalizedY: number };
