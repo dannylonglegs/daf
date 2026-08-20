@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { randomNumbers } from "../lib/functions";
 import { useState } from "react";
