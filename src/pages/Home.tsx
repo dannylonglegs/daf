@@ -1,38 +1,36 @@
 import { motion } from "framer-motion";
 import WorkNav from "../components/WorkNav";
-
+import { useState } from "react";
+import { randomNumbers } from "../lib/functions";
 
 export default function Home() {
+    const [numbers] = useState<number[]>(() => randomNumbers(10));
 
   return (
       <div  className="flex flex-col m-4">
-        <motion.header
+        {/* <motion.header
           initial={{ opacity: 0, x: 0 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
         >
-          <img className="scale-[110%] md:max-w-[50%] hover:blur-[.5px] transition-all duration-200 cursor-pointer" src="/hd007.png" alt="Header Image" />
-        </motion.header>
+          <img className=" md:max-w-[25%] transition-all duration-200 cursor-pointer" src="/daf-copy.jpg" alt="Header Image" />
+        </motion.header> */}
         <motion.p
-          className="text-2xl mb-24 max-w-[700px]"
+          className=" mb-24 max-w-[700px]"
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 0 }}
           transition={{ delay: 0.75, duration: 0.5, ease: "easeOut" }}
         >
-            <span className="active:blur-[2px] md:hover:blur-[2px] transition-all duration-200">
-              Daniel Alexander Fernandes
+            <span 
+            style={{ '--tw-rotate': `${numbers[0]}deg` } as React.CSSProperties} 
+            className={`hover:bg-blue-500 hover:cursor-wait hover:rotate-[var(--tw-rotate)] hover:text-white inline-block transition-all duration-200`}>
+              <h1 className="font-bold">Daniel Alexander Fernandes</h1>
             </span>{" "}
             is a front-end engineer and creative coder working in web design and
             development, with a background in fine arts. Currently open for work.
         </motion.p>
-        <motion.h1 
-          className="text-2xl mb-2" 
-          initial={{ opacity: 0, y: 0 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
-        >Selected Work:</motion.h1>
         <WorkNav />
       </div>
   );

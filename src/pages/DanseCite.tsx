@@ -14,8 +14,8 @@ const danseCiteImages: string[] = [
 export default function DanseCite() {
   return (
     <WorkPageLayout title="Danse-Cité" images={danseCiteImages}>
-      <div className="text-lg space-y-4 max-w-[700px]">
-        <h2 className="text-xl ">Danse-Cité 40th Anniversary Rebrand and Website</h2>
+      <div className=" space-y-4 max-w-[700px]">
+        <h2 className=" ">Danse-Cité 40th Anniversary Rebrand and Website</h2>
           <p>
           Full visual and website redesign for contemporary dance company Danse-Cité’s 40th anniversary, including updated branding, visual language, and digital presence.
           </p>

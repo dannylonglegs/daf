@@ -14,7 +14,7 @@ export default function MaterialMatters() {
       title="Material Matters" 
       images={materialMattersImages}
     >
-      <div className="text-lg space-y-4 max-w-[700px]">
+      <div className="space-y-4 max-w-[700px]">
         {/* <h2>Material Matters — Research Website</h2> */}
 
             <p>

@@ -10,7 +10,7 @@ export default function MaggiePeach() {
       title="Maggie Peach" 
       images={maggiePeachImages}
       >
-      <div className="text-lg space-y-4 max-w-[700px]">
+      <div className="space-y-4 max-w-[700px]">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et dignissim libero, at eleifend augue...
         </p>

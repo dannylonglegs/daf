@@ -15,7 +15,7 @@ export default function Ette() {
       title="Ette Designer Portfolio" 
       images={etteImages}
     >
-      <div className="text-lg space-y-4 max-w-[700px]">
+      <div className="space-y-4 max-w-[700px]">
         {/* <h1>Ette — Designer Portfolio</h1> */}
         <p>
             Portfolio site for Toronto-based furniture and interior designer Kate Richard.

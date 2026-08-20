@@ -1,48 +1,63 @@
-import { motion } from "framer-motion";
-import { 
-  Link, 
-  // useLocation 
-} from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
+import { randomNumbers } from "../lib/functions";
+import { useState } from "react";
 
 const linkClasses =
-  "inline-block whitespace-nowrap z-20 bg-white p-1 text-2xl transform hover:blur-[1px] transition-all duration-200 cursor-pointer mr-3";
+  "relative inline-block whitespace-nowrap z-20 p-0.5 transform hover:bg-blue-500 hover:text-white transition-all duration-200 cursor-pointer mr-3";
+
+const workLinks = [
+  // { to: "/maggie-peach", label: "Maggie Peach" },
+  { to: "/playworkgroup", label: "PlayWorkGroup" },
+  { to: "/ette", label: "Ette" },
+  { to: "/material-matters", label: "Material Matters" },
+  { to: "/danse-cite", label: "Danse-Cité" },
+];
 
 export default function WorkNav() {
-  // const location = useLocation();
-  // const isHome = location.pathname === "/";
+  const [numbers] = useState<number[]>(() => randomNumbers(workLinks.length));
 
   return (
-    <motion.div
-      layout
-      layoutId="worknav"
-      className="flex flex-row justify-between"
-    >
-      <motion.div 
-        className="flex flex-row flex-wrap items-center gap-y-2"
-        >
-        {/* <Link to="/maggie-peach" className={linkClasses}>→ Maggie Peach</Link> */}
-        <Link to="/playworkgroup" className={linkClasses}>→ PlayWorkGroup</Link>
-        <Link to="/ette" className={linkClasses}>→ Ette</Link>
-        <Link to="/material-matters" className={linkClasses}>→ Material Matters</Link>
-        <Link to="/danse-cite" className={linkClasses}>→ Danse-Cité</Link>
-      </motion.div>
-
-      {/* {!isHome && (
-        <motion.div
-          key="home-link"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.3, ease: "easeOut" }}
-          className="shrink-0"
-        >
-          <Link
-            to="/"
-            className="inline-block whitespace-nowrap p-1 text-2xl bg-white transform hover:blur-[2px] transition-all duration-200 cursor-pointer"
+    <motion.div layout layoutId="worknav" className="flex flex-row justify-between">
+      <motion.div className="flex flex-col flex-wrap">
+        <motion.h1 
+          className="font-bold" 
+          // initial={{ opacity: 0, y: 0 }} 
+          // animate={{ opacity: 1, y: 0 }} 
+          // transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
+        >Selected Coding Work:</motion.h1>
+        {workLinks.map(({ to, label }, i) => (
+          <NavLink
+            key={to}
+            to={to}
+            style={{ "--tw-rotate": `${numbers[i]}deg` } as React.CSSProperties}
+            className={`${linkClasses} hover:rotate-[var(--tw-rotate)]`}
+            // className={({ isActive }) =>
+            //   `${linkClasses} hover:rotate-[var(--tw-rotate)] ${
+            //     isActive ? "text-white" : ""
+            //   }`
+            // }
           >
-            ↺
-          </Link>
-        </motion.div>
-      )} */}
+            {/* {({ isActive }) => (
+              <>
+                <AnimatePresence>
+                  {isActive && (
+                    <motion.span
+                      className="absolute inset-0 bg-blue-500 -z-10"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.2, ease: "easeOut" }}
+                    />
+                  )}
+                </AnimatePresence>
+                <span className="relative">→ {label}</span>
+              </>
+            )} */}
+            → {label}
+          </NavLink>
+        ))}
+      </motion.div>
     </motion.div>
   );
 }

@@ -1,24 +1,13 @@
-type SVGFilterProps = {
-  sliderValue: number;   
-  normalizedY?: number;   
-};
-
-export default function SVGFilter({ sliderValue }: SVGFilterProps) {
-  return (
-    <svg width="0" height="0" aria-hidden="true">
-      <defs>
-        <filter id="glow">
-          <feColorMatrix
-            in="SourceGraphic"
-            type="luminanceToAlpha"
-            result="LUMINANCE"
-          />
-          <feDiffuseLighting in="LUMINANCE" surfaceScale={40} result="LIGHTING">
-            <feDistantLight azimuth={sliderValue} elevation={120} />
-          </feDiffuseLighting>
-          <feComposite in="LIGHTING" in2="SourceGraphic" operator="in" />
-        </filter>
-      </defs>
-    </svg>
-  );
-}
+<filter id="glow">
+  <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="BLUR" />
+  <feColorMatrix
+    in="BLUR"
+    type="matrix"
+    values="1 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0
+            0 0 0 20 -8"
+    result="GLOW"
+  />
+  <feBlend in="SourceGraphic" in2="GLOW" mode="screen" />
+</filter>

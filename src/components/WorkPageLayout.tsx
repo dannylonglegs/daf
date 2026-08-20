@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
-import NoFilterPortal from "../components/NoFilterPortal";
 import Swiper from "../components/Swiper";
 import WorkNav from "../components/WorkNav";
 import { motion, AnimatePresence } from "framer-motion";
@@ -50,7 +49,7 @@ export default function WorkPageLayout({ title, images, children }: Props) {
         exit={{ opacity: 0 }}
         transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
       >
-         <h1 className="text-4xl pt-8 pb-4">{title}</h1>
+         <h1 className="font-bold pt-8 pb-4">{title}</h1>
         <section className=" ">
             {children}
         </section>
@@ -61,7 +60,7 @@ export default function WorkPageLayout({ title, images, children }: Props) {
               key={src}
               type="button"
               onClick={() => openAt(idx)}
-              className="aspect-square overflow-hidden border border-white/40 cursor-pointer hover:blur-[1px] transition"
+              className="aspect-square overflow-hidden border border-white/40 cursor-pointer hover:invert transition"
             >
               <img
                 src={src}
@@ -77,10 +76,7 @@ export default function WorkPageLayout({ title, images, children }: Props) {
 
       <AnimatePresence>
         {isOpen && (
-          <NoFilterPortal
-            className="fixed inset-0 z-[9999] pointer-events-auto"
-            placeholderClassName="w-0 h-0"
-          >
+          <div className="fixed inset-0 z-[9999] pointer-events-auto">
             <motion.div
               className="fixed inset-0"
               initial={{ opacity: 0 }}
@@ -114,7 +110,7 @@ export default function WorkPageLayout({ title, images, children }: Props) {
                 </div>
               </div>
             </motion.div>
-          </NoFilterPortal>
+          </div>
         )}
       </AnimatePresence>
     </div>
