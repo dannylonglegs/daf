@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { randomNumbers } from "../lib/functions";
 import { useState } from "react";
+import LanguageSwitch from "./LanguageSwitch";
 
-const linkClasses = "hover:bg-red-500 hover:text-white transition-all";
+const linkClasses = "hover:bg-red-500 hover:text-sky-200 transition-all";
 
 type FooterLink = {
   to: string;
@@ -42,7 +43,10 @@ export const Footer = () => {
           );
         })}
       </nav>
-      <p className="hidden md:block my-auto">&copy; {new Date().getFullYear()}</p>
+      <div className="flex flex-row gap-x-4">
+        <LanguageSwitch />
+        <p className="hidden md:block my-auto">&copy; {new Date().getFullYear()}</p>
+      </div>
     </footer>
   );
 };
