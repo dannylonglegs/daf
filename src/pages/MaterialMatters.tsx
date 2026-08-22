@@ -1,4 +1,5 @@
-import WorkPageLayout from "../components/WorkPageLayout";
+import PageLayout from "../components/PageLayout";
+import WorkNav from "../components/WorkNav";
 
 const materialMattersImages: string[] = [
   "/mm/mm001.png",
@@ -10,7 +11,8 @@ const materialMattersImages: string[] = [
 
 export default function MaterialMatters() {
   return (
-    <WorkPageLayout 
+    <PageLayout 
+      nav={<WorkNav />}
       images={materialMattersImages}
     >
       <div className="space-y-4 max-w-[700px]">
@@ -25,6 +27,6 @@ export default function MaterialMatters() {
             </p>
 
       </div>
-    </WorkPageLayout>
+    </PageLayout>
   );
 }

@@ -1,4 +1,5 @@
-import WorkPageLayout from "../components/WorkPageLayout";
+import PageLayout from "../components/PageLayout";
+import WorkNav from "../components/WorkNav";
 
 const maggiePeachImages: string[] = [
   "/dc/dc001.png",
@@ -6,14 +7,15 @@ const maggiePeachImages: string[] = [
 
 export default function MaggiePeach() {
   return (
-    <WorkPageLayout 
+    <PageLayout 
+      nav={<WorkNav />}
       images={maggiePeachImages}
-      >
+    >
       <div className="space-y-4 max-w-[700px]">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et dignissim libero, at eleifend augue...
         </p>
       </div>
-    </WorkPageLayout>
+    </PageLayout>
   );
 }

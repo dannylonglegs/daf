@@ -1,4 +1,5 @@
-import WorkPageLayout from "../components/WorkPageLayout";
+import PageLayout from "../components/PageLayout";
+import WorkNav from "../components/WorkNav";
 
 const playWorkGroupImages: string[] = [
     "/ngp/ngp04.png",
@@ -11,7 +12,8 @@ const playWorkGroupImages: string[] = [
 
 export default function PlayWorkGroup() {
   return (
-    <WorkPageLayout 
+    <PageLayout 
+      nav={<WorkNav />}
       images={playWorkGroupImages}
     >
       <div className=" space-y-4 max-w-[700px]">
@@ -23,6 +25,6 @@ export default function PlayWorkGroup() {
         Led primary development using Next.js and Contentful. Focused on clean, professional design, strong content flow, and SEO-friendly architecture.
         </p>
       </div>
-    </WorkPageLayout>
+    </PageLayout>
   );
 }

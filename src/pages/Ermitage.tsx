@@ -1,4 +1,5 @@
-import OtherProjectsLayout from "../components/OtherProjectsLayout";
+import PageLayout from "../components/PageLayout";
+import OtherWorkNav from "../components/OtherWorkNav";
  
 const ermitageImages: string[] = [
   "/ermitage/ermitage001.png",
@@ -6,12 +7,13 @@ const ermitageImages: string[] = [
 
 export default function Ermitage() {
   return (
-    <OtherProjectsLayout 
-      images={ermitageImages}
+    <PageLayout 
+        nav={<OtherWorkNav />}
+        images={ermitageImages}
     >
       <div className="">
 
       </div>
-    </OtherProjectsLayout>
+    </PageLayout>
   );
 }

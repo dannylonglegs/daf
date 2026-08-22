@@ -1,4 +1,5 @@
-import WorkPageLayout from "../components/WorkPageLayout";
+import PageLayout from "../components/PageLayout";
+import WorkNav from "../components/WorkNav";
 
 const etteImages: string[] = [
   "/e/ette01.png",
@@ -11,7 +12,8 @@ const etteImages: string[] = [
 
 export default function Ette() {
   return (
-    <WorkPageLayout 
+    <PageLayout 
+      nav={<WorkNav />}
       images={etteImages}
     >
       <div className="flex flex-row gap-x-8">
@@ -34,6 +36,6 @@ export default function Ette() {
           </p>
         </div>
       </div>
-    </WorkPageLayout>
+    </PageLayout>
   );
 }

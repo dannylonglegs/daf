@@ -1,4 +1,5 @@
-import WorkPageLayout from "../components/WorkPageLayout";
+import PageLayout from "../components/PageLayout";
+import WorkNav from "../components/WorkNav";
 
 const danseCiteImages: string[] = [
   "/dc/dc001.png",
@@ -13,7 +14,7 @@ const danseCiteImages: string[] = [
 
 export default function DanseCite() {
   return (
-    <WorkPageLayout images={danseCiteImages}>
+    <PageLayout nav={<WorkNav />} images={danseCiteImages}>
       <div className=" space-y-4 max-w-[700px]">
         <h2 className=" ">Danse-Cité 40th Anniversary Rebrand and Website</h2>
           <p>
@@ -25,6 +26,6 @@ export default function DanseCite() {
           </p>
 
       </div>
-    </WorkPageLayout>
+    </PageLayout>
   );
 }

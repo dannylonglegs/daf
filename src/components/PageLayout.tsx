@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 import Swiper from "../components/Swiper";
-import WorkNav from "../components/WorkNav";
 import { motion, AnimatePresence } from "framer-motion";
 
 type Props = {
-  // title: string;
+  nav: ReactNode;
   images: string[];
   children: ReactNode;
 };
 
-export default function WorkPageLayout({ images, children }: Props) {
+export default function PageLayout({ nav, images, children }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [startIndex, setStartIndex] = useState(0);
 
@@ -40,19 +39,16 @@ export default function WorkPageLayout({ images, children }: Props) {
 
   return (
     <div className="flex flex-col h-full min-h-0 p-4">
-      <WorkNav />
+      {nav}
 
       <motion.div
-        className="flex flex-col flex-1 min-h-0 overflow-y-auto z-0 pb-8 no-scrollbar" 
+        className="flex flex-col flex-1 min-h-0 overflow-y-auto z-0 pb-8 no-scrollbar"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
       >
-         {/* {title ? <h1 className="font-bold pt-8 pb-4">{title }</h1> : null} */}
-        <section>
-            {children}
-        </section>
+        <section>{children}</section>
 
         <div className="mt-10 mb-10 grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2 max-w-[900px]">
           {images.map((src, idx) => (
@@ -103,8 +99,8 @@ export default function WorkPageLayout({ images, children }: Props) {
                     onClose={close}
                     initialSlide={startIndex}
                     breakpoints={{
-                        0:   { slidesPerView: 1},
-                        768: { slidesPerView: 2 },
+                      0: { slidesPerView: 1 },
+                      768: { slidesPerView: 2 },
                     }}
                   />
                 </div>
