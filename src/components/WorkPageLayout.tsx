@@ -5,12 +5,12 @@ import WorkNav from "../components/WorkNav";
 import { motion, AnimatePresence } from "framer-motion";
 
 type Props = {
-  title: string;
+  // title: string;
   images: string[];
   children: ReactNode;
 };
 
-export default function WorkPageLayout({ title, images, children }: Props) {
+export default function WorkPageLayout({ images, children }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [startIndex, setStartIndex] = useState(0);
 
@@ -49,8 +49,8 @@ export default function WorkPageLayout({ title, images, children }: Props) {
         exit={{ opacity: 0 }}
         transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
       >
-         <h1 className="font-bold pt-8 pb-4">{title}</h1>
-        <section className=" ">
+         {/* {title ? <h1 className="font-bold pt-8 pb-4">{title }</h1> : null} */}
+        <section>
             {children}
         </section>
 
