@@ -11,7 +11,6 @@ const materialMattersImages: string[] = [
 export default function MaterialMatters() {
   return (
     <WorkPageLayout 
-      title="Material Matters" 
       images={materialMattersImages}
     >
       <div className="space-y-4 max-w-[700px]">

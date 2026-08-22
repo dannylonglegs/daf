@@ -12,7 +12,6 @@ const playWorkGroupImages: string[] = [
 export default function PlayWorkGroup() {
   return (
     <WorkPageLayout 
-      title="PlayWorkGroup" 
       images={playWorkGroupImages}
     >
       <div className=" space-y-4 max-w-[700px]">

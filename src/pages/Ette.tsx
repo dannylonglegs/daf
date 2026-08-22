@@ -12,7 +12,6 @@ const etteImages: string[] = [
 export default function Ette() {
   return (
     <WorkPageLayout 
-      // title="Ette Designer Portfolio" 
       images={etteImages}
     >
       <div className="flex flex-row gap-x-8">

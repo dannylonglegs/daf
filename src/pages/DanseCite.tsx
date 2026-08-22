@@ -13,7 +13,7 @@ const danseCiteImages: string[] = [
 
 export default function DanseCite() {
   return (
-    <WorkPageLayout title="Danse-Cité" images={danseCiteImages}>
+    <WorkPageLayout images={danseCiteImages}>
       <div className=" space-y-4 max-w-[700px]">
         <h2 className=" ">Danse-Cité 40th Anniversary Rebrand and Website</h2>
           <p>

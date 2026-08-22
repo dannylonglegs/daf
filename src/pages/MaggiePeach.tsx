@@ -7,7 +7,6 @@ const maggiePeachImages: string[] = [
 export default function MaggiePeach() {
   return (
     <WorkPageLayout 
-      title="Maggie Peach" 
       images={maggiePeachImages}
       >
       <div className="space-y-4 max-w-[700px]">

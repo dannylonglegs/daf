@@ -7,6 +7,7 @@ import DanseCite from "./pages/DanseCite";
 import PlayWorkGroup from "./pages/PlayWorkGroup";
 import Ette from "./pages/Ette";
 import MaterialMatters from "./pages/MaterialMatters";
+import Ermitage from "./pages/Ermitage";
 import AppLayout from "./AppLayout";
 
 export default function AnimatedRoutes() {
@@ -23,6 +24,7 @@ export default function AnimatedRoutes() {
             <Route path="/ette" element={<Ette />} />
             <Route path="/material-matters" element={<MaterialMatters />} />
             <Route path="/danse-cite" element={<DanseCite />} />
+             <Route path="/ermitage-308" element={<Ermitage />} />
           </Route>
         </Routes>
       </AnimatePresence>
