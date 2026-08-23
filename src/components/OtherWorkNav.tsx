@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { randomNumbers } from "../lib/functions";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useLocale } from "../lib/useLocale";
 import type { TranslationKey } from "../lib/i18n";
 
@@ -17,17 +17,17 @@ const workLinks = [
   //   { to: "/danse-cite", label: "Danse-Cité" },
 ];
 
-let hasOtherWorkNavAppeared = false;
+// let hasOtherWorkNavAppeared = false;
 
 export default function OtherWorkNav() {
   const [numbers] = useState<number[]>(() => randomNumbers(workLinks.length));
   const [hoveredTo, setHoveredTo] = useState<string | null>(null);
   const { t } = useLocale();
-  const isFirstMount = !hasOtherWorkNavAppeared;
+  // const isFirstMount = !hasOtherWorkNavAppeared;
 
-  useEffect(() => {
-    hasOtherWorkNavAppeared = true;
-  }, []);
+  // useEffect(() => {
+  //   hasOtherWorkNavAppeared = true;
+  // }, []);
 
   const renderColumn = (titleKey: TranslationKey, className = "") => (
     <motion.div className={`flex flex-col flex-wrap flex-1 items-start ${className}`}>
@@ -57,9 +57,9 @@ export default function OtherWorkNav() {
       layout
       layoutId="otherworknav"
       className="flex flex-row gap-x-8"
-      initial={isFirstMount ? { opacity: 0 } : false}
-      animate={{ opacity: 1 }}
-      transition={{ delay: isFirstMount ? 1 : 0, duration: 0.5, ease: "easeOut" }}
+      // initial={isFirstMount ? { opacity: 0 } : false}
+      // animate={{ opacity: 1 }}
+      // transition={{ delay: isFirstMount ? 1 : 0, duration: 0.5, ease: "easeOut" }}
     >
       {renderColumn("home.otherProjects")}
       {renderColumn("home.otherProjectsOpposite", "hidden md:flex")}

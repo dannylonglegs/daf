@@ -43,10 +43,10 @@ export default function PageLayout({ nav, images, children }: Props) {
 
       <motion.div
         className="flex flex-col flex-1 min-h-0 overflow-y-auto z-0 pb-8 no-scrollbar"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
+        // initial={{ opacity: 0 }}
+        // animate={{ opacity: 1 }}
+        // exit={{ opacity: 0 }}
+        // transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
       >
         <section>{children}</section>
 

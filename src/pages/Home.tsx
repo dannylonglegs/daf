@@ -32,10 +32,10 @@ export default function Home() {
       <div className="flex flex-row gap-x-8">
         <motion.p
           className=" mb-12 flex-1"
-          initial={{ opacity: 0, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 0 }}
-          transition={{ delay: 0.75, duration: 0.5, ease: "easeOut" }}
+          // initial={{ opacity: 0, y: 0 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // exit={{ opacity: 0, y: 0 }}
+          // transition={{ delay: 0.75, duration: 0.5, ease: "easeOut" }}
         >
           <span
             style={{ "--tw-rotate": `${numbers[0]}deg` } as React.CSSProperties}
@@ -48,10 +48,10 @@ export default function Home() {
         </motion.p>
         <motion.p
           className="hidden md:block mb-24 flex-1"
-          initial={{ opacity: 0, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 0 }}
-          transition={{ delay: 0.75, duration: 0.5, ease: "easeOut" }}
+          // initial={{ opacity: 0, y: 0 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // exit={{ opacity: 0, y: 0 }}
+          // transition={{ delay: 0.75, duration: 0.5, ease: "easeOut" }}
         >
           <span
             style={{ "--tw-rotate": `${numbers[1]}deg` } as React.CSSProperties}

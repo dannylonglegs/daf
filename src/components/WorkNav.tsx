@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { randomNumbers } from "../lib/functions";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useLocale } from "../lib/useLocale";
 import type { TranslationKey } from "../lib/i18n";
 
@@ -15,17 +15,17 @@ const workLinks = [
   { to: "/danse-cite", label: "Danse-Cité" },
 ];
 
-let hasWorkNavAppeared = false;
+// let hasWorkNavAppeared = false;
 
 export default function WorkNav() {
   const [numbers] = useState<number[]>(() => randomNumbers(workLinks.length));
   const [hoveredTo, setHoveredTo] = useState<string | null>(null);
   const { t } = useLocale();
-  const isFirstMount = !hasWorkNavAppeared;
+  // const isFirstMount = !hasWorkNavAppeared;
 
-  useEffect(() => {
-    hasWorkNavAppeared = true;
-  }, []);
+  // useEffect(() => {
+  //   hasWorkNavAppeared = true;
+  // }, []);
 
   const renderColumn = (titleKey: TranslationKey, className = "") => (
     <motion.div className={`flex flex-col flex-wrap flex-1 items-start ${className}`}>
@@ -55,9 +55,9 @@ export default function WorkNav() {
       layout
       layoutId="worknav"
       className="flex flex-row gap-x-8 mb-8 "
-      initial={isFirstMount ? { opacity: 0 } : false}
-      animate={{ opacity: 1 }}
-      transition={{ delay: isFirstMount ? 1 : 0, duration: 0.5, ease: "easeOut" }}
+      // initial={isFirstMount ? { opacity: 0 } : false}
+      // animate={{ opacity: 1 }}
+      // transition={{ delay: isFirstMount ? 1 : 0, duration: 0.5, ease: "easeOut" }}
     >
       {renderColumn("home.selectedWork")}
       {renderColumn("home.selectedWorkOpposite", "hidden md:flex")}
