@@ -3,29 +3,54 @@ import { NavLink } from "react-router-dom";
 import { randomNumbers } from "../lib/functions";
 import { useEffect, useState } from "react";
 import { useLocale } from "../lib/useLocale";
+import type { TranslationKey } from "../lib/i18n";
 
 const linkClasses =
-  "relative inline-block whitespace-nowrap z-20 p-0.5 transform hover:bg-red-500 hover:text-yellow-200 transition-all duration-200 cursor-pointer mr-3";
+  "relative inline-block whitespace-nowrap z-20 p-0.5 transform transition-all duration-200 cursor-pointer mr-3";
 
 const workLinks = [
   // { to: "/maggie-peach", label: "Maggie Peach" },
   { to: "/personal-artwork", label: "Personal Artwork" },
   { to: "/ermitage-308", label: "Ermitage 308" },
   { to: "/eolith", label: "Eolith" },
-//   { to: "/material-matters", label: "Material Matters" },
-//   { to: "/danse-cite", label: "Danse-Cité" },
+  //   { to: "/material-matters", label: "Material Matters" },
+  //   { to: "/danse-cite", label: "Danse-Cité" },
 ];
 
 let hasOtherWorkNavAppeared = false;
 
 export default function OtherWorkNav() {
   const [numbers] = useState<number[]>(() => randomNumbers(workLinks.length));
+  const [hoveredTo, setHoveredTo] = useState<string | null>(null);
   const { t } = useLocale();
   const isFirstMount = !hasOtherWorkNavAppeared;
 
   useEffect(() => {
     hasOtherWorkNavAppeared = true;
   }, []);
+
+  const renderColumn = (titleKey: TranslationKey, className = "") => (
+    <motion.div className={`flex flex-col flex-wrap flex-1 items-start ${className}`}>
+      <motion.h1 className="font-bold">{t(titleKey)}</motion.h1>
+      {workLinks.map(({ to, label }, i) => {
+        const isHovered = hoveredTo === to;
+        return (
+          <NavLink
+            key={to}
+            to={to}
+            onMouseEnter={() => setHoveredTo(to)}
+            onMouseLeave={() => setHoveredTo(null)}
+            style={{ "--tw-rotate": `${numbers[i]}deg` } as React.CSSProperties}
+            className={`${linkClasses} ${
+              isHovered ? "bg-red-500 text-yellow-200 rotate-[var(--tw-rotate)]" : ""
+            }`}
+          >
+            → {label}
+          </NavLink>
+        );
+      })}
+    </motion.div>
+  );
 
   return (
     <motion.div
@@ -36,32 +61,8 @@ export default function OtherWorkNav() {
       animate={{ opacity: 1 }}
       transition={{ delay: isFirstMount ? 1 : 0, duration: 0.5, ease: "easeOut" }}
     >
-      <motion.div className="flex flex-col flex-wrap flex-1 items-start">
-        <motion.h1 className="font-bold">{t("home.otherProjects")}</motion.h1>
-        {workLinks.map(({ to, label }, i) => (
-          <NavLink
-            key={to}
-            to={to}
-            style={{ "--tw-rotate": `${numbers[i]}deg` } as React.CSSProperties}
-            className={`${linkClasses} hover:rotate-[var(--tw-rotate)]`}
-          >
-            → {label}
-          </NavLink>
-        ))}
-      </motion.div>
-      <motion.div className="hidden md:flex flex-col flex-wrap flex-1 items-start">
-        <motion.h1 className="font-bold">{t("home.otherProjectsOpposite")}</motion.h1>
-        {workLinks.map(({ to, label }, i) => (
-          <NavLink
-            key={to}
-            to={to}
-            style={{ "--tw-rotate": `${numbers[i]}deg` } as React.CSSProperties}
-            className={`${linkClasses} hover:rotate-[var(--tw-rotate)]`}
-          >
-            → {label}
-          </NavLink>
-        ))}
-      </motion.div>
+      {renderColumn("home.otherProjects")}
+      {renderColumn("home.otherProjectsOpposite", "hidden md:flex")}
     </motion.div>
   );
 }
