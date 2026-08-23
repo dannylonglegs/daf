@@ -11,6 +11,7 @@ const workLinks = [
   // { to: "/maggie-peach", label: "Maggie Peach" },
   { to: "/personal-artwork", label: "Personal Artwork" },
   { to: "/ermitage-308", label: "Ermitage 308" },
+  { to: "/eolith", label: "Eolith" },
 //   { to: "/material-matters", label: "Material Matters" },
 //   { to: "/danse-cite", label: "Danse-Cité" },
 ];
@@ -48,7 +49,7 @@ export default function OtherWorkNav() {
           </NavLink>
         ))}
       </motion.div>
-      <motion.div className="flex flex-col flex-wrap flex-1 items-start">
+      <motion.div className="hidden md:flex flex-col flex-wrap flex-1 items-start">
         <motion.h1 className="font-bold">{t("home.otherProjectsOpposite")}</motion.h1>
         {workLinks.map(({ to, label }, i) => (
           <NavLink

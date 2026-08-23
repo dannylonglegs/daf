@@ -36,7 +36,7 @@ export default function Home() {
               {t("home.tagline")} 
           </motion.p>
           <motion.p
-            className=" mb-24 flex-1"
+            className="hidden md:block mb-24 flex-1"
             initial={{ opacity: 0, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 0 }}

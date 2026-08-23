@@ -48,7 +48,7 @@ export default function WorkNav() {
           </NavLink>
         ))}
       </motion.div>
-      <motion.div className="flex flex-col flex-wrap flex-1 items-start">
+      <motion.div className="hidden md:flex flex-col flex-wrap flex-1 items-start">
         <motion.h1 className="font-bold">{t("home.selectedWorkOpposite")}</motion.h1>
         {workLinks.map(({ to, label }, i) => (
           <NavLink

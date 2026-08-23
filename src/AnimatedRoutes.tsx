@@ -8,7 +8,9 @@ import PlayWorkGroup from "./pages/PlayWorkGroup";
 import Ette from "./pages/Ette";
 import MaterialMatters from "./pages/MaterialMatters";
 import Ermitage from "./pages/Ermitage";
+import Eolith from "./pages/Eolith";
 import AppLayout from "./AppLayout";
+import Art from "./pages/Art";
 
 export default function AnimatedRoutes() {
   const location = useLocation();
@@ -24,7 +26,9 @@ export default function AnimatedRoutes() {
             <Route path="/ette" element={<Ette />} />
             <Route path="/material-matters" element={<MaterialMatters />} />
             <Route path="/danse-cite" element={<DanseCite />} />
-             <Route path="/ermitage-308" element={<Ermitage />} />
+            <Route path="/personal-artwork" element={<Art />} />
+            <Route path="/ermitage-308" element={<Ermitage />} />
+            <Route path="/eolith" element={<Eolith />} />
           </Route>
         </Routes>
       </AnimatePresence>
