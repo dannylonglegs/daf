@@ -2,16 +2,19 @@ import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 import Swiper from "../components/Swiper";
 import { motion, AnimatePresence } from "framer-motion";
+import Thumbnails from "./Thumbnails";
 
 type Props = {
   nav: ReactNode;
   images: string[];
+  slides: number;
   children: ReactNode;
 };
 
-export default function PageLayout({ nav, images, children }: Props) {
+export default function PageLayout({ nav, images, slides, children }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [startIndex, setStartIndex] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const openAt = (idx: number) => {
     setStartIndex(idx);
@@ -49,25 +52,14 @@ export default function PageLayout({ nav, images, children }: Props) {
         // transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
       >
         <section>{children}</section>
-
-        <div className="mt-10 mb-10 grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2 max-w-[900px]">
-          {images.map((src, idx) => (
-            <button
-              key={src}
-              type="button"
-              onClick={() => openAt(idx)}
-              className="aspect-square overflow-hidden border border-white/40 cursor-pointer hover:invert transition"
-            >
-              <img
-                src={src}
-                alt={`Thumbnail ${idx + 1}`}
-                className="w-full h-full object-cover"
-                loading="lazy"
-                draggable={false}
-              />
-            </button>
-          ))}
-        </div>
+        <section className="flex flex-row gap-x-8" >
+          <div className="flex-1">
+            <Thumbnails images={images} onSelect={openAt} hoveredIndex={hoveredIndex} onHoverChange={setHoveredIndex} />
+          </div>
+          <div className="flex-1">
+            <Thumbnails images={images} onSelect={openAt} hoveredIndex={hoveredIndex} onHoverChange={setHoveredIndex} />
+          </div>
+        </section>
       </motion.div>
 
       <AnimatePresence>
@@ -81,26 +73,26 @@ export default function PageLayout({ nav, images, children }: Props) {
               onClick={close}
             />
             <motion.div
-              className="fixed bg-white/70 inset-0 flex items-center justify-center p-4"
+              className="fixed bg-white/90 inset-0 flex items-center justify-center p-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
               <div
-                className="w-full max-w-[1100px]"
+                className="w-full max-w-[1100px] max-h-[90vh]"
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="">
                   <Swiper
                     key={`${isOpen}-${startIndex}`}
                     images={images}
-                    slidesPerView={2}
+                    slidesPerView={slides? slides : 2}
                     spaceBetween={16}
                     onClose={close}
                     initialSlide={startIndex}
                     breakpoints={{
                       0: { slidesPerView: 1 },
-                      768: { slidesPerView: 2 },
+                      768: { slidesPerView: slides ? slides : 2 },
                     }}
                   />
                 </div>

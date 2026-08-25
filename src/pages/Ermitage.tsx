@@ -23,6 +23,7 @@ export default function Ermitage() {
     <PageLayout 
         nav={<OtherWorkNav />}
         images={ermitageImages}
+        slides={1}
     >
       <div className="">
 

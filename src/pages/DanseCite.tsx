@@ -1,5 +1,6 @@
 import PageLayout from "../components/PageLayout";
 import WorkNav from "../components/WorkNav";
+import { useLocale } from "../lib/useLocale";
 
 const danseCiteImages: string[] = [
   "/dc/dc001.png",
@@ -13,18 +14,22 @@ const danseCiteImages: string[] = [
 ];
 
 export default function DanseCite() {
+  const { t } = useLocale();
   return (
-    <PageLayout nav={<WorkNav />} images={danseCiteImages}>
-      <div className=" space-y-4 max-w-[700px]">
-        <h2 className=" ">Danse-Cité 40th Anniversary Rebrand and Website</h2>
+    <PageLayout nav={<WorkNav />} images={danseCiteImages} slides={2}>
+      <div className="flex flex-row gap-x-8">
+        <div className="flex-1">
+        <h2 className=" "> {t("code.danseCiteTitle")} </h2>
           <p>
-          Full visual and website redesign for contemporary dance company Danse-Cité’s 40th anniversary, including updated branding, visual language, and digital presence.
+          {t("code.danseCiteDescription")}
           </p>
-
+          </div>
+        <div className="flex-1">
+          <h2 className=" "> {t("code.danseCiteTitleOpposite")} </h2>
           <p>
-          Developed the site using Next.js and Contentful CMS, based on branding by Steven Steffen and web/UI design created collaboratively as a duo. Built a modern, highly navigable experience featuring a sortable archive of 40 years of performances, and trained the team to manage content independently.
+          {t("code.danseCiteDescriptionOpposite")}
           </p>
-
+        </div>
       </div>
     </PageLayout>
   );

@@ -40,7 +40,7 @@ export default function WorkNav() {
             onMouseLeave={() => setHoveredTo(null)}
             style={{ "--tw-rotate": `${numbers[i]}deg` } as React.CSSProperties}
             className={`${linkClasses} ${
-              isHovered ? "bg-stone-400 text-yellow-200 rotate-[var(--tw-rotate)]" : ""
+              isHovered ? "bg-red-500 text-yellow-200 rotate-[var(--tw-rotate)]" : ""
             }`}
           >
             → {label}

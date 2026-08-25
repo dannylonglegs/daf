@@ -15,6 +15,7 @@ export default function PlayWorkGroup() {
     <PageLayout 
       nav={<WorkNav />}
       images={playWorkGroupImages}
+      slides={2}
     >
       <div className=" space-y-4 max-w-[700px]">
         <h2 className="">Novos Growth Partners & Apollo Care Corporate Websites</h2>

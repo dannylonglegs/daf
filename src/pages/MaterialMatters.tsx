@@ -1,5 +1,6 @@
 import PageLayout from "../components/PageLayout";
 import WorkNav from "../components/WorkNav";
+import { useLocale } from "../lib/useLocale";
 
 const materialMattersImages: string[] = [
   "/mm/mm001.png",
@@ -10,22 +11,26 @@ const materialMattersImages: string[] = [
 ];
 
 export default function MaterialMatters() {
+  const { t } = useLocale();
   return (
     <PageLayout 
       nav={<WorkNav />}
       images={materialMattersImages}
+      slides={2}
     >
-      <div className="space-y-4 max-w-[700px]">
-        {/* <h2>Material Matters — Research Website</h2> */}
-
-            <p>
-            Website for Material Matters, a research initiative at Emily Carr University of Art and Design.
+      <div className="flex flex-row gap-x-8">
+        <div className="flex-1">
+          <h2>{t("code.materialMattersTitle")}</h2>
+            <p className="whitespace-pre-line">
+            {t("code.materialMattersDescription")}
             </p>
-
-            <p>
-            Consulted on UI/UX and developed the site with GatsbyJS and Contentful CMS. Designed a sortable homepage layout with intentional blank space to create visual rhythm, and trained the team to manage content independently.
+        </div>
+        <div className="flex-1">
+          <h2>{t("code.materialMattersTitle")}</h2>
+            <p className="whitespace-pre-line">
+            {t("code.materialMattersDescription")}
             </p>
-
+        </div>
       </div>
     </PageLayout>
   );

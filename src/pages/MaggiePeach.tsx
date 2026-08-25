@@ -10,6 +10,7 @@ export default function MaggiePeach() {
     <PageLayout 
       nav={<WorkNav />}
       images={maggiePeachImages}
+      slides={2}
     >
       <div className="space-y-4 max-w-[700px]">
         <p>

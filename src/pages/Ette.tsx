@@ -1,5 +1,6 @@
 import PageLayout from "../components/PageLayout";
 import WorkNav from "../components/WorkNav";
+import { useLocale } from "../lib/useLocale";
 
 const etteImages: string[] = [
   "/e/ette01.png",
@@ -11,28 +12,25 @@ const etteImages: string[] = [
 ];
 
 export default function Ette() {
+  const { t } = useLocale();
+
   return (
     <PageLayout 
       nav={<WorkNav />}
       images={etteImages}
+      slides={2}
     >
       <div className="flex flex-row gap-x-8">
-        <div>
-          <h1>Ette — Designer Portfolio</h1>
-          <p>
-              Portfolio site for Toronto-based furniture and interior designer Kate Richard.
-          </p>
-          <p>
-              Led UI/UX and developed the site with GatsbyJS and Contentful CMS. Built an infinite-scrolling, lazy-loaded gallery to handle a large volume of imagery while keeping performance smooth.
+        <div className="flex-1">
+          <h1>{t("code.etteTitle")}</h1>
+          <p className="whitespace-pre-line">
+          {t("code.etteDescription")}
           </p>
         </div>
-        <div>
-          <h1>Ette — Designer Portfolio</h1>
-          <p>
-              Portfolio site for Toronto-based furniture and interior designer Kate Richard.
-          </p>
-          <p>
-              Led UI/UX and developed the site with GatsbyJS and Contentful CMS. Built an infinite-scrolling, lazy-loaded gallery to handle a large volume of imagery while keeping performance smooth.
+        <div className="hidden md:flex flex-col flex-1 ">
+          <h1>{t("code.etteTitleOpposite")}</h1>
+          <p className="whitespace-pre-line">
+           {t("code.etteDescriptionOpposite")}
           </p>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import PageLayout from "../components/PageLayout";
 import OtherWorkNav from "../components/OtherWorkNav";
- 
+import { useLocale } from "../lib/useLocale";
+
 const eolithImages: string[] = [
   "/eolith/001.webp",
   "/eolith/002.webp",
@@ -25,13 +26,26 @@ const eolithImages: string[] = [
 ];
 
 export default function Eolith() {
+  const { t } = useLocale();
   return (
-    <PageLayout 
-        nav={<OtherWorkNav />}
-        images={eolithImages}
+    <PageLayout
+      nav={<OtherWorkNav />}
+      images={eolithImages}
+      slides={1}
     >
-      <div className="">
-
+      <div className="flex flex-row gap-x-8">
+        <div className="flex-1">
+          <h2>{t("projects.eolithTitle")}</h2>
+          <p className="whitespace-pre-line">
+            {t("projects.eolithDescription")}
+          </p>
+        </div>
+        <div className="flex-1">
+          <h2>{t("projects.eolithTitleOpposite")}</h2>
+          <p className="whitespace-pre-line">
+            {t("projects.eolithDescriptionOpposite")}
+          </p>
+        </div>
       </div>
     </PageLayout>
   );
