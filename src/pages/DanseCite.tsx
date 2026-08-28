@@ -1,6 +1,5 @@
-import PageLayout from "../components/PageLayout";
+import ProjectPage from "../components/ProjectPage";
 import WorkNav from "../components/WorkNav";
-import { useLocale } from "../lib/useLocale";
 
 const danseCiteImages: string[] = [
   "/dc/dc001.png",
@@ -14,23 +13,13 @@ const danseCiteImages: string[] = [
 ];
 
 export default function DanseCite() {
-  const { t } = useLocale();
   return (
-    <PageLayout nav={<WorkNav />} images={danseCiteImages} slides={2}>
-      <div className="flex flex-row gap-x-8">
-        <div className="flex-1">
-        <h2 className=" "> {t("code.danseCiteTitle")} </h2>
-          <p>
-          {t("code.danseCiteDescription")}
-          </p>
-          </div>
-        <div className="flex-1">
-          <h2 className=" "> {t("code.danseCiteTitleOpposite")} </h2>
-          <p>
-          {t("code.danseCiteDescriptionOpposite")}
-          </p>
-        </div>
-      </div>
-    </PageLayout>
+    <ProjectPage
+      nav={<WorkNav />}
+      images={danseCiteImages}
+      slides={2}
+      translationKey="code.danseCite"
+      link="https://www.danse-cite.org/"
+    />
   );
 }

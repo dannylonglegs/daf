@@ -29,7 +29,7 @@ export const Footer = () => {
           const isHovered = hoveredTo === link.to;
           const style = { "--tw-rotate": `${numbers[i]}deg` } as React.CSSProperties;
           const linkClassName = `${linkClasses} ${
-            isHovered ? "bg-red-500 text-sky-200 rotate-[var(--tw-rotate)]" : ""
+            isHovered ? "bg-red-500 text-white rotate-[var(--tw-rotate)]" : ""
           }`;
 
           const handlers = {

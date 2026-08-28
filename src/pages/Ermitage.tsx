@@ -1,6 +1,6 @@
-import PageLayout from "../components/PageLayout";
+import ProjectPage from "../components/ProjectPage";
 import OtherWorkNav from "../components/OtherWorkNav";
- 
+
 const ermitageImages: string[] = [
   "/ermitage/001.jpg",
   "/ermitage/002.jpg",
@@ -20,14 +20,12 @@ const ermitageImages: string[] = [
 
 export default function Ermitage() {
   return (
-    <PageLayout 
-        nav={<OtherWorkNav />}
-        images={ermitageImages}
-        slides={1}
-    >
-      <div className="">
-
-      </div>
-    </PageLayout>
+    <ProjectPage
+      nav={<OtherWorkNav />}
+      images={ermitageImages}
+      slides={1}
+      translationKey="projects.ermitage"
+      link="https://www.ermitage308.com/"
+    />
   );
 }

@@ -1,6 +1,5 @@
-import PageLayout from "../components/PageLayout";
+import ProjectPage from "../components/ProjectPage";
 import OtherWorkNav from "../components/OtherWorkNav";
-import { useLocale } from "../lib/useLocale";
 
 const eolithImages: string[] = [
   "/eolith/001.webp",
@@ -26,27 +25,15 @@ const eolithImages: string[] = [
 ];
 
 export default function Eolith() {
-  const { t } = useLocale();
+
   return (
-    <PageLayout
+    <ProjectPage
       nav={<OtherWorkNav />}
       images={eolithImages}
       slides={1}
-    >
-      <div className="flex flex-row gap-x-8">
-        <div className="flex-1">
-          <h2>{t("projects.eolithTitle")}</h2>
-          <p className="whitespace-pre-line">
-            {t("projects.eolithDescription")}
-          </p>
-        </div>
-        <div className="flex-1">
-          <h2>{t("projects.eolithTitleOpposite")}</h2>
-          <p className="whitespace-pre-line">
-            {t("projects.eolithDescriptionOpposite")}
-          </p>
-        </div>
-      </div>
-    </PageLayout>
+      translationKey="projects.eolith"
+      link="https://www.ermitage308.com/archive"
+    > 
+    </ProjectPage>
   );
 }

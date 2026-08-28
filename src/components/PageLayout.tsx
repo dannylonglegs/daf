@@ -56,7 +56,7 @@ export default function PageLayout({ nav, images, slides, children }: Props) {
           <div className="flex-1">
             <Thumbnails images={images} onSelect={openAt} hoveredIndex={hoveredIndex} onHoverChange={setHoveredIndex} />
           </div>
-          <div className="flex-1">
+          <div className="hidden md:flex flex-col flex-1">
             <Thumbnails images={images} onSelect={openAt} hoveredIndex={hoveredIndex} onHoverChange={setHoveredIndex} />
           </div>
         </section>

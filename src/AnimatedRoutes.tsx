@@ -11,6 +11,7 @@ import Ermitage from "./pages/Ermitage";
 import Eolith from "./pages/Eolith";
 import AppLayout from "./AppLayout";
 import Art from "./pages/Art";
+import SetTechnician from "./pages/SetTechnician";
 
 export default function AnimatedRoutes() {
   const location = useLocation();
@@ -29,6 +30,7 @@ export default function AnimatedRoutes() {
             <Route path="/personal-artwork" element={<Art />} />
             <Route path="/ermitage-308" element={<Ermitage />} />
             <Route path="/eolith" element={<Eolith />} />
+            <Route path="/set-technician" element={<SetTechnician />} />
           </Route>
         </Routes>
       </AnimatePresence>

@@ -1,5 +1,5 @@
-import PageLayout from "../components/PageLayout";
 import OtherWorkNav from "../components/OtherWorkNav";
+import ProjectPage from "../components/ProjectPage";
  
 const artImages: string[] = [
   // "/art/01.jpg",
@@ -10,21 +10,18 @@ const artImages: string[] = [
   "/art/06.jpg",
   "/art/07.jpg",
   "/art/08.jpg",
-   "/art/02.jpg",
+  "/art/02.jpg",
   "/art/09.jpg",
-
 ];
 
 export default function Art() {
   return (
-    <PageLayout 
+    <ProjectPage
         nav={<OtherWorkNav />}
         images={artImages}
         slides={1}
+        translationKey="projects.artwork"
     >
-      <div className="">
-
-      </div>
-    </PageLayout>
+    </ProjectPage>
   );
 }

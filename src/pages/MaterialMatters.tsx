@@ -1,6 +1,5 @@
-import PageLayout from "../components/PageLayout";
+import ProjectPage from "../components/ProjectPage";
 import WorkNav from "../components/WorkNav";
-import { useLocale } from "../lib/useLocale";
 
 const materialMattersImages: string[] = [
   "/mm/mm001.png",
@@ -11,27 +10,13 @@ const materialMattersImages: string[] = [
 ];
 
 export default function MaterialMatters() {
-  const { t } = useLocale();
   return (
-    <PageLayout 
+    <ProjectPage
       nav={<WorkNav />}
       images={materialMattersImages}
       slides={2}
-    >
-      <div className="flex flex-row gap-x-8">
-        <div className="flex-1">
-          <h2>{t("code.materialMattersTitle")}</h2>
-            <p className="whitespace-pre-line">
-            {t("code.materialMattersDescription")}
-            </p>
-        </div>
-        <div className="flex-1">
-          <h2>{t("code.materialMattersTitle")}</h2>
-            <p className="whitespace-pre-line">
-            {t("code.materialMattersDescription")}
-            </p>
-        </div>
-      </div>
-    </PageLayout>
+      translationKey="code.materialMatters"
+      link="https://materialmatters.ecuad.ca/"
+    />
   );
 }

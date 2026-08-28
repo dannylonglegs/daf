@@ -13,6 +13,7 @@ const workLinks = [
   { to: "/personal-artwork", label: "Personal Artwork" },
   { to: "/ermitage-308", label: "Ermitage 308" },
   { to: "/eolith", label: "Eolith" },
+  { to: "/set-technician", label: "Art Department Technician" },
   //   { to: "/material-matters", label: "Material Matters" },
   //   { to: "/danse-cite", label: "Danse-Cité" },
 ];
@@ -42,7 +43,7 @@ export default function OtherWorkNav() {
             onMouseLeave={() => setHoveredTo(null)}
             style={{ "--tw-rotate": `${numbers[i]}deg` } as React.CSSProperties}
             className={`${linkClasses} ${
-              isHovered ? "bg-red-500 text-yellow-200 rotate-[var(--tw-rotate)]" : ""
+              isHovered ? "bg-red-500 text-white rotate-[var(--tw-rotate)]" : ""
             }`}
           >
             → {label}

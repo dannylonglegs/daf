@@ -1,5 +1,33 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Union";
+  src: url("/union/union_bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Union";
+  src: url("/union/union_regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Union";
+  src: url("/union/union_regular_italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --font-union: "Union", sans-serif;
+}
+
 html,
 body {
   height: 100%;
@@ -11,12 +39,12 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Courier Prime", monospace;
+  font-family: "Union", sans-serif;
   font-size: 14px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Arimo", sans-serif;
+  font-family: "Union", sans-serif;
   font-size: 16px;
 }
 

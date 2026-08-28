@@ -1,22 +1,19 @@
-import PageLayout from "../components/PageLayout";
+import ProjectPage from "../components/ProjectPage";
 import WorkNav from "../components/WorkNav";
 
-const maggiePeachImages: string[] = [
-  "/dc/dc001.png",
-];
+const maggiePeachImages: string[] = [ "/mp/03.png", "/mp/01.png", "/mp/05.png", "/mp/04.png", ];
 
 export default function MaggiePeach() {
   return (
-    <PageLayout 
+    <ProjectPage
       nav={<WorkNav />}
       images={maggiePeachImages}
       slides={2}
+      translationKey="code.maggiePeach"
+      link="https://www.missmaggiepeach.com/"
     >
       <div className="space-y-4 max-w-[700px]">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et dignissim libero, at eleifend augue...
-        </p>
       </div>
-    </PageLayout>
+    </ProjectPage>
   );
 }

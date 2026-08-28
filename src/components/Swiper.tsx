@@ -1,7 +1,6 @@
 import React from "react";
 import { Swiper as SwiperRoot, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-// import type { Swiper as SwiperType } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -27,6 +26,7 @@ const Swiper: React.FC<SwiperProps> = ({
   breakpoints,
 }) => {
   return (
+    <>
     <SwiperRoot
       modules={[Navigation, Pagination, Autoplay]}
       spaceBetween={spaceBetween}
@@ -51,23 +51,23 @@ const Swiper: React.FC<SwiperProps> = ({
           />
         </SwiperSlide>
       ))}
-
-      <button
+    </SwiperRoot>
+       <button
         onClick={(e) => {
           e.stopPropagation();
           onClose();
         }}
-        className="h-8 w-8 flex flex-col justify-center text-center absolute top-2 right-2 z-10 cursor-pointer bg-white border-1 text-neutral-500 hover:blur-[1px] transition-all duration-200"
+        className="h-8 w-8 md:h-12 md:w-12 flex flex-col justify-center text-center absolute top-2 right-2 z-10 cursor-pointer bg-white border-1 hover:bg-blue-500 hover:text-white hover:transition-all hover:duration-200"
       >
         X
       </button>
-      <div className="h-8 w-8 flex flex-col justify-center text-center custom-swiper-button-prev absolute top-1/2 -translate-y-1/2 left-2 z-10 cursor-pointer bg-white border-1 text-neutral-500 hover:blur-[1px] transition-all duration-200">
+      <div className="h-8 w-8 md:h-12 md:w-12 flex flex-col justify-center text-center custom-swiper-button-prev absolute bottom-2 left-2 z-10 cursor-pointer bg-white border-1  hover:bg-blue-500 hover:text-white transition-all duration-200">
         ←
       </div>
-      <div className="h-8 w-8 flex flex-col justify-center text-center custom-swiper-button-next absolute top-1/2 -translate-y-1/2 right-2 z-10 cursor-pointer bg-white border-1 text-neutral-500 hover:blur-[1px] transition-all duration-200">
+      <div className="h-8 w-8 md:h-12 md:w-12 flex flex-col justify-center text-center custom-swiper-button-next absolute bottom-2 right-2 z-10 cursor-pointer bg-white border-1 hover:bg-blue-500 hover:text-white transition-all duration-200">
         →
       </div>
-    </SwiperRoot>
+    </>
   );
 };
 

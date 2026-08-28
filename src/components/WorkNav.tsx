@@ -9,23 +9,17 @@ const linkClasses =
   "relative inline-block whitespace-nowrap z-20 p-0.5 transform transition-all duration-200 cursor-pointer mr-3";
 
 const workLinks = [
+  { to: "/maggie-peach", label: "Maggie Peach" },
   { to: "/playworkgroup", label: "PlayWorkGroup" },
   { to: "/ette", label: "Ette" },
   { to: "/material-matters", label: "Material Matters" },
   { to: "/danse-cite", label: "Danse-Cité" },
 ];
 
-// let hasWorkNavAppeared = false;
-
 export default function WorkNav() {
   const [numbers] = useState<number[]>(() => randomNumbers(workLinks.length));
   const [hoveredTo, setHoveredTo] = useState<string | null>(null);
   const { t } = useLocale();
-  // const isFirstMount = !hasWorkNavAppeared;
-
-  // useEffect(() => {
-  //   hasWorkNavAppeared = true;
-  // }, []);
 
   const renderColumn = (titleKey: TranslationKey, className = "") => (
     <motion.div className={`flex flex-col flex-wrap flex-1 items-start ${className}`}>
@@ -40,7 +34,7 @@ export default function WorkNav() {
             onMouseLeave={() => setHoveredTo(null)}
             style={{ "--tw-rotate": `${numbers[i]}deg` } as React.CSSProperties}
             className={`${linkClasses} ${
-              isHovered ? "bg-red-500 text-yellow-200 rotate-[var(--tw-rotate)]" : ""
+              isHovered ? "bg-red-500 text-white rotate-[var(--tw-rotate)]" : ""
             }`}
           >
             → {label}

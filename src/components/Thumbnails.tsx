@@ -15,7 +15,7 @@ export default function Thumbnails({
 }: ThumbnailsProps) {
   return (
     <div
-      className={`mt-8 grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2 max-w-[900px] ${className}`}
+      className={`my-8 grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2 max-w-[900px] ${className}`}
     >
       {images.map((src, idx) => (
         <button
