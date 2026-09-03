@@ -21,25 +21,27 @@ function SwiperImage({ img, alt }: { img: GalleryImage; alt: string }) {
   const [loaded, setLoaded] = useState(false);
 
   return (
-   <div className="relative w-full h-full overflow-hidden">
-    <img
-      src={img.placeholder}
-      aria-hidden
-      className="absolute inset-0 w-full h-full object-contain blur-lg scale-105"
-    />
-    <img
-      srcSet={img.full}
-      sizes="(min-width: 1024px) 80vw, 100vw"
-      alt={alt}
-      loading="lazy"
-      decoding="async"
-      draggable={false}
-      onLoad={() => setLoaded(true)}
-      className={`relative w-full h-full object-contain select-none transition-opacity duration-500 ${
-        loaded ? "opacity-100" : "opacity-0"
-      }`}
-    />
-  </div>
+    <div className="relative w-full h-full overflow-hidden">
+      <img
+        src={img.placeholder}
+        aria-hidden
+        style={{ aspectRatio: img.aspectRatio }}
+        className="absolute inset-0 w-full h-full object-contain "
+      />
+      <img
+        srcSet={img.full}
+        sizes="(min-width: 1024px) 80vw, 100vw"
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        draggable={false}
+        onLoad={() => setLoaded(true)}
+        style={{ aspectRatio: img.aspectRatio }}
+        className={`absolute inset-0 w-full h-full object-contain select-none transition-opacity duration-500 ${
+          loaded ? "opacity-100" : "opacity-0"
+        }`}
+      />
+    </div>
   );
 }
 

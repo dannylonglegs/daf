@@ -3,6 +3,7 @@ export type GalleryImage = {
   thumb: string;
   full: string;
   placeholder: string;
+  aspectRatio: number;
 };
 
 const thumbs = import.meta.glob<string>("/src/assets/work/**/*.{png,jpg}", {
@@ -18,19 +19,30 @@ const fulls = import.meta.glob<string>("/src/assets/work/**/*.{png,jpg}", {
 });
 
 const placeholders = import.meta.glob<string>("/src/assets/work/**/*.{png,jpg}", {
-  query: { w: "20", blur: "4", format: "webp", inline: "" },
+  query: { w: "64", blur: "4", format: "webp", inline: "" },
   import: "default",
   eager: true,
 });
+
+const metas = import.meta.glob<{ width: number; height: number }>(
+  "/src/assets/work/**/*.{png,jpg}",
+  { query: { as: "metadata" }, import: "default", eager: true }
+);
+
+console.log(Object.entries(metas)[0]);
 
 export function getProjectImages(folder: string): GalleryImage[] {
   return Object.keys(thumbs)
     .filter((path) => path.includes(`/work/${folder}/`))
     .sort()
-    .map((path) => ({
-      src: path,
-      thumb: thumbs[path],
-      full: fulls[path],
-      placeholder: placeholders[path],
-    }));
+    .map((path) => {
+      const meta = metas[path];
+      return {
+        src: path,
+        thumb: thumbs[path],
+        full: fulls[path],
+        placeholder: placeholders[path],
+        aspectRatio: meta.width / meta.height,
+      };
+    });
 }
