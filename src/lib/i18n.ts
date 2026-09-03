@@ -60,7 +60,7 @@ const projects = {
       linkLabelOpposite: "Voir le site web",
     },
     "code.playWorkGroup": {
-      title: "Novos Growth Partners & Apollo Care Corporate Websites",
+      title: "Novos Growth Partners & Apollo Care Websites",
       titleOpposite: "Sites web pour Novos Growth Partners et Apollo Care",
       description:
         "Web developer on several contracted projects for New York City creative agency PlayWorkGroup. Select clients include: Novos Growth Partners and its subsidiary Apollo Care.\n\nI developed these sites using Next.js and Contentful. My focus was on clean, professional design with a strong content flow, and an emphasis on SEO-friendly architecture.",
@@ -162,7 +162,7 @@ const projects = {
     },
     "code.playWorkGroup": {
       title: "Sites web pour Novos Growth Partners et Apollo Care",
-      titleOpposite: "Novos Growth Partners & Apollo Care Corporate Websites",
+      titleOpposite: "Novos Growth Partners & Apollo Care Websites",
       description:
         "Développeur web sur plusieurs projets réalisés pour l'agence créative PlayWorkGroup, basée à New York. Parmi les clients : Novos Growth Partners et sa filiale Apollo Care.\n\nJ'ai développé ces sites avec Next.js et Contentful. Mon travail était centré sur un design simple et professionnel, une bonne organisation du contenu et une structure adaptée au référencement SEO.",
       descriptionOpposite:
