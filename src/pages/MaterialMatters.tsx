@@ -1,13 +1,8 @@
 import ProjectPage from "../components/ProjectPage";
 import WorkNav from "../components/WorkNav";
+import { getProjectImages } from "../lib/gallery";
 
-const materialMattersImages: string[] = [
-  "/mm/mm001.png",
-  "/mm/mm002.png",
-  "/mm/mm003.png",
-  "/mm/mm004.png",
-  "/mm/mm005.png",
-];
+const materialMattersImages = getProjectImages("mm");
 
 export default function MaterialMatters() {
   return (

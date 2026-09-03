@@ -2,10 +2,11 @@ import type { ReactNode } from "react";
 import PageLayout from "./PageLayout";
 import { useLocale } from "../lib/useLocale";
 import type { ProjectKey } from "../lib/i18n";
+import type { GalleryImage } from "../lib/gallery";
 
 type ProjectPageProps = {
   nav: ReactNode;
-  images: string[];
+  images: GalleryImage[];
   slides: number;
   translationKey: ProjectKey;
   link?: string;

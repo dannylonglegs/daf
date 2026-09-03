@@ -1,16 +1,8 @@
 import ProjectPage from "../components/ProjectPage";
 import WorkNav from "../components/WorkNav";
+import { getProjectImages } from "../lib/gallery";
 
-const danseCiteImages: string[] = [
-  "/dc/dc001.png",
-  "/dc/dc002.png",
-  "/dc/dc003.png",
-  "/dc/dc004.png",
-  "/dc/dc005.png",
-  "/dc/dc006.png",
-  "/dc/dc007.png",
-  "/dc/dc008.png",
-];
+const danseCiteImages = getProjectImages("dc");
 
 export default function DanseCite() {
   return (

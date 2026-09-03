@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Swiper as SwiperRoot, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import type { GalleryImage } from "../lib/gallery";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 type SwiperProps = {
-  images: string[];
+  images: GalleryImage[];
   slidesPerView?: number;
   spaceBetween?: number;
   className?: string;
@@ -15,6 +16,32 @@ type SwiperProps = {
   initialSlide?: number;
   breakpoints?: Record<number, any>;
 };
+
+function SwiperImage({ img, alt }: { img: GalleryImage; alt: string }) {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+   <div className="relative w-full h-full overflow-hidden">
+    <img
+      src={img.placeholder}
+      aria-hidden
+      className="absolute inset-0 w-full h-full object-contain blur-lg scale-105"
+    />
+    <img
+      srcSet={img.full}
+      sizes="(min-width: 1024px) 80vw, 100vw"
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+      draggable={false}
+      onLoad={() => setLoaded(true)}
+      className={`relative w-full h-full object-contain select-none transition-opacity duration-500 ${
+        loaded ? "opacity-100" : "opacity-0"
+      }`}
+    />
+  </div>
+  );
+}
 
 const Swiper: React.FC<SwiperProps> = ({
   images,
@@ -40,15 +67,9 @@ const Swiper: React.FC<SwiperProps> = ({
       }}
       className={`h-[80vh] ${className}`}
     >
-      {images.map((src, i) => (
-        <SwiperSlide key={src}>
-          <img
-            src={src}
-            alt={`Slide ${i + 1}`}
-            className="w-full h-full object-contain select-none"
-            draggable={false}
-            loading="lazy"
-          />
+      {images.map((img, i) => (
+        <SwiperSlide key={img.src}>
+          <SwiperImage img={img} alt={`Slide ${i + 1}`} />
         </SwiperSlide>
       ))}
     </SwiperRoot>

@@ -1,14 +1,8 @@
 import ProjectPage from "../components/ProjectPage";
 import WorkNav from "../components/WorkNav";
+import { getProjectImages } from "../lib/gallery";
 
-const etteImages: string[] = [
-  "/e/ette01.png",
-  "/e/ette02.png",
-  "/e/ette03.png",
-  "/e/ette04.png",
-  "/e/ette05.png",
-  "/e/ette06.png",
-];
+const etteImages = getProjectImages("e");    
 
 export default function Ette() {
   return (

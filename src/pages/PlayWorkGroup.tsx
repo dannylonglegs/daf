@@ -1,14 +1,8 @@
 import ProjectPage from "../components/ProjectPage";
 import WorkNav from "../components/WorkNav";
+import { getProjectImages } from "../lib/gallery";
 
-const playWorkGroupImages: string[] = [
-  "/ngp/ngp04.png",
-  "/ngp/ngp01.png",
-  "/ngp/ngp02.png",
-  "/ngp/ngp03.png",
-  "/ngp/ngp05.png",
-  "/ngp/ngp06.png",
-];
+const playWorkGroupImages = getProjectImages("ngp");
 
 export default function PlayWorkGroup() {
   return (

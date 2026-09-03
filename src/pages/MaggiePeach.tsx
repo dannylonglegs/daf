@@ -1,7 +1,8 @@
 import ProjectPage from "../components/ProjectPage";
 import WorkNav from "../components/WorkNav";
+import { getProjectImages } from "../lib/gallery";
 
-const maggiePeachImages: string[] = [ "/mp/03.png", "/mp/01.png", "/mp/05.png", "/mp/04.png", ];
+const maggiePeachImages = getProjectImages("mp");
 
 export default function MaggiePeach() {
   return (
