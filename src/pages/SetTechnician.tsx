@@ -1,15 +1,8 @@
 import OtherWorkNav from "../components/OtherWorkNav";
 import ProjectPage from "../components/ProjectPage";
- 
-const setImages: string[] = [
-  "/set/01.jpeg",
-  "/set/02.jpeg",
-  "/set/03.jpeg",
-  "/set/04.jpeg",
-  "/set/05.jpeg",
-  "/set/06.jpeg",
-  "/set/07.jpeg",
-];
+import { getProjectImages } from "../lib/gallery";
+
+const setImages = getProjectImages("set");
 
 export default function SetTechnician() {
 

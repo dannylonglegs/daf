@@ -3,10 +3,11 @@ import type { ReactNode } from "react";
 import Swiper from "../components/Swiper";
 import { motion, AnimatePresence } from "framer-motion";
 import Thumbnails from "./Thumbnails";
+import type { GalleryImage } from "../lib/gallery";
 
 type Props = {
   nav: ReactNode;
-  images: string[];
+  images: GalleryImage[];
   slides: number;
   children: ReactNode;
 };
