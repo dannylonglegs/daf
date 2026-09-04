@@ -6,16 +6,13 @@ import { useLocale } from "../lib/useLocale";
 import type { TranslationKey } from "../lib/i18n";
 
 const linkClasses =
-  "relative inline-block whitespace-nowrap z-20 p-0.5 transform transition-all duration-200 cursor-pointer mr-3";
+  "relative inline-block whitespace-nowrap z-20 p-0.5 transform transition-all duration-200 mr-3";
 
 const workLinks = [
-  // { to: "/maggie-peach", label: "Maggie Peach" },
   { to: "/personal-artwork", label: "Personal Artwork" },
   { to: "/ermitage-308", label: "Ermitage 308" },
   { to: "/eolith", label: "Eolith" },
   { to: "/set-technician", label: "Art Department Technician" },
-  //   { to: "/material-matters", label: "Material Matters" },
-  //   { to: "/danse-cite", label: "Danse-Cité" },
 ];
 
 // let hasOtherWorkNavAppeared = false;
@@ -33,23 +30,30 @@ export default function OtherWorkNav() {
   const renderColumn = (titleKey: TranslationKey, className = "") => (
     <motion.div className={`flex flex-col flex-wrap flex-1 items-start ${className}`}>
       <motion.h1 className="font-bold">{t(titleKey)}</motion.h1>
-      {workLinks.map(({ to, label }, i) => {
-        const isHovered = hoveredTo === to;
-        return (
-          <NavLink
-            key={to}
-            to={to}
-            onMouseEnter={() => setHoveredTo(to)}
-            onMouseLeave={() => setHoveredTo(null)}
-            style={{ "--tw-rotate": `${numbers[i]}deg` } as React.CSSProperties}
-            className={`${linkClasses} ${
-              isHovered ? "bg-red-500 text-white rotate-[var(--tw-rotate)]" : ""
-            }`}
-          >
-            → {label}
-          </NavLink>
-        );
-      })}
+      {workLinks.map(({ to, label }, i) => (
+        <NavLink
+          key={to}
+          to={to}
+          onMouseEnter={() => setHoveredTo(to)}
+          onMouseLeave={() => setHoveredTo(null)}
+          style={{ "--tw-rotate": `${numbers[i]}deg` } as React.CSSProperties}
+          className={({ isActive }) => {
+            const isHovered = hoveredTo === to;
+
+            return `${linkClasses} ${
+              isActive
+                ? isHovered
+                  ? "cursor-not-allowed"
+                  : ""
+                : isHovered
+                ? "bg-red-500 text-white cursor-pointer rotate-[var(--tw-rotate)]"
+                : ""
+            }`;
+          }}
+        >
+          → {label}
+        </NavLink>
+      ))}
     </motion.div>
   );
 
