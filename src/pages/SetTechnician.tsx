@@ -8,7 +8,6 @@ export default function SetTechnician() {
 
     const doubledContent = (  
         <>
-        <p>Listed are some projects I have worked on:</p>
         <ul className="max-w-[600px] whitespace-pre-line list-disc list-inside">
           <li>
             <a href="https://youtu.be/7vfc7gVpP4E?si=46gseRPQieILz4my" className="underline" target="_blank" rel="noopener noreferrer">
