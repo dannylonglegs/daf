@@ -37,13 +37,14 @@ export default function Home() {
           // exit={{ opacity: 0, y: 0 }}
           // transition={{ delay: 0.75, duration: 0.5, ease: "easeOut" }}
         >
+          {t("home.pretagline")}
           <span
             style={{ "--tw-rotate": `${numbers[0]}deg` } as React.CSSProperties}
             className={nameSpanClassName}
             {...nameHandlers}
           >
             <h1 className="font-bold">Daniel Alexander Fernandes</h1>
-          </span>{" "}
+          </span>{""}
           {t("home.tagline")}
         </motion.p>
         <motion.p
@@ -53,13 +54,14 @@ export default function Home() {
           // exit={{ opacity: 0, y: 0 }}
           // transition={{ delay: 0.75, duration: 0.5, ease: "easeOut" }}
         >
+          {t("home.pretaglineOpposite")}
           <span
             style={{ "--tw-rotate": `${numbers[1]}deg` } as React.CSSProperties}
             className={nameSpanClassName}
             {...nameHandlers}
           >
             <h1 className="font-bold">Daniel Alexander Fernandes</h1>
-          </span>{" "}
+          </span>{""}
           {t("home.taglineOpposite")}
         </motion.p>
       </div>

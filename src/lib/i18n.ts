@@ -12,10 +12,12 @@ export type ProjectEntry = {
 
 const ui = {
   en: {
+    "home.pretagline": "My name is ",
+     "home.pretaglineOpposite": "Je m'appelle ",
     "home.tagline":
-      "My name is Daniel Alexander Fernandes\nand I am a multidisciplinary creative coder working in web design and development, spatial installation, with a background in the fine arts. I work across both digital and physical experiences, collaborating across marketing, design and creative projects.\n\nCurrently open for new opportunities.",
+      " and I am a multidisciplinary creative coder working in web design and development, spatial installation, with a background in the fine arts. I work across both digital and physical experiences, collaborating across marketing, design and creative projects.\n\nCurrently open for new opportunities.",
     "home.taglineOpposite":
-      "Je m'appelle Daniel Alexander Fernandes.\nJe suis un créatif multidisciplinaire spécialisé en programmation créative, en design et développement web, ainsi qu'en installation dans l'espace. J'ai aussi une formation en arts visuels. Je travaille sur des projets numériques et physiques, en collaboration avec des équipes de marketing, de design et de création.\nJe suis actuellement ouvert à de nouvelles opportunités.",
+      ". Je suis un créatif multidisciplinaire spécialisé en programmation créative, en design et développement web, ainsi qu'en installation dans l'espace. J'ai aussi une formation en arts visuels. Je travaille sur des projets numériques et physiques, en collaboration avec des équipes de marketing, de design et de création.\n\nJe suis actuellement ouvert à de nouvelles opportunités.",
     "home.selectedWork": "Selected Work:",
     "home.selectedWorkOpposite": "Travaux Sélectionnés :",
     "home.otherProjects": "Other Projects:",
@@ -23,10 +25,12 @@ const ui = {
     "footer.contact": "Contact",
   },
   fr: {
+     "home.pretagline": "Je m'appelle ",
+     "home.pretaglineOpposite": "My name is ",
     "home.tagline":
-      "Je m'appelle Daniel Alexander Fernandes.\nJe suis un créatif multidisciplinaire spécialisé en programmation créative, en design et développement web, ainsi qu'en installation dans l'espace. J'ai aussi une formation en arts visuels. Je travaille sur des projets numériques et physiques, en collaboration avec des équipes de marketing, de design et de création.\nJe suis actuellement ouvert à de nouvelles opportunités.",
+      ". Je suis un créatif multidisciplinaire spécialisé en programmation créative, en design et développement web, ainsi qu'en installation dans l'espace. J'ai aussi une formation en arts visuels. Je travaille sur des projets numériques et physiques, en collaboration avec des équipes de marketing, de design et de création.\n\nJe suis actuellement ouvert à de nouvelles opportunités.",
     "home.taglineOpposite":
-      "My name is Daniel Alexander Fernandes\nand I am a multidisciplinary creative coder working in web design and development, spatial installation, with a background in the fine arts. I work across both digital and physical experiences, collaborating across marketing, design and creative projects.\n\nCurrently open for new opportunities.",
+      " and I am a multidisciplinary creative coder working in web design and development, spatial installation, with a background in the fine arts. I work across both digital and physical experiences, collaborating across marketing, design and creative projects.\n\nCurrently open for new opportunities.",
     "home.selectedWork": "Travaux Sélectionnés :",
     "home.selectedWorkOpposite": "Selected Work:",
     "home.otherProjects": "Autres Projets :",
@@ -54,7 +58,7 @@ const projects = {
       description:
         "Portfolio site for Toronto-based furniture and interior designer Kate Richard.\n\nI was the primary UI/UX designer and developer. The site uses GatsbyJS and Contentful CMS. The primary feature is an infinite-scrolling, lazy-loaded gallery to handle a large volume of images with smooth performance.",
       descriptionOpposite:
-        "Site portfolio pour Kate Richard, designer de mobilier et d'intérieur basée à Toronto.\n\nJ'étais le principal designer UI/UX et développeur du projet. Le site utilise GatsbyJS et le CMS Contentful.\n\nLa fonction principale du site est une galerie avec défilement infini et chargement progressif des images. Cette solution permet de présenter un grand nombre d'images tout en gardant une navigation fluide.",
+        "Site portfolio pour Kate Richard, designer de mobilier et d'intérieur basée à Toronto.\n\nJ'étais le principal designer UI/UX et développeur du projet. Le site utilise GatsbyJS et le CMS Contentful. La fonction principale du site est une galerie avec défilement infini et chargement progressif des images. Cette solution permet de présenter un grand nombre d'images tout en gardant une navigation fluide.",
       link: "",
       linkLabel: "Visit website",
       linkLabelOpposite: "Voir le site web",
@@ -87,7 +91,7 @@ const projects = {
       description:
         "Website for Material Matters, a research initiative at Emily Carr University of Art and Design.\n\nFor this project, I consulted on the UI/UX design and developed the site with GatsbyJS and Contentful CMS. This site features a sortable homepage layout with intentional blank space, inserted randomly at page load, to break up visual conformity. Alongside development, I trained the team to manage content independently.\n\nThis website is no longer active after 2025, but still available to view.",
       descriptionOpposite:
-        "Site web pour Material Matters, un projet de recherche de l'Emily Carr University of Art and Design.\n\nPour ce projet, j'ai participé au design UI/UX et j'ai développé le site avec GatsbyJS et le CMS Contentful. La page d'accueil utilise une mise en page qui peut être triée et qui contient des espaces vides placés de façon aléatoire au chargement de la page. Cela permet de casser la régularité visuelle de la mise en page.\nEn plus du développement, j'ai formé l'équipe pour qu'elle puisse gérer le contenu du site de façon autonome.\n\nLe site n'est plus actif depuis 2025, mais il est toujours possible de le consulter.",
+        "Site web pour Material Matters, un projet de recherche de l'Emily Carr University of Art and Design.\n\nPour ce projet, j'ai participé au design UI/UX et j'ai développé le site avec GatsbyJS et le CMS Contentful. La page d'accueil utilise une mise en page qui peut être triée et qui contient des espaces vides placés de façon aléatoire au chargement de la page. Cela permet de casser la régularité visuelle de la mise en page. En plus du développement, j'ai formé l'équipe pour qu'elle puisse gérer le contenu du site de façon autonome.\n\nLe site n'est plus actif depuis 2025, mais il est toujours possible de le consulter.",
       link: "",
       linkLabel: "Visit website",
       linkLabelOpposite: "Voir le site web",
@@ -98,7 +102,7 @@ const projects = {
       description:
         "Since graduating from art school in 2017, I maintain a small artistic practice, primarily of paintings and charcoal drawings.\n\nI have exhibited my artwork in solo and group exhibitions both locally and abroad, in places such as Winnipeg, Glasgow, and Shanghai. Below is a small selection of my artwork.",
       descriptionOpposite:
-        "Depuis la fin de mes études en arts en 2017, je maintiens une petite pratique artistique, principalement en peinture et en dessin au fusain.\n\nJ'ai présenté mon travail dans des expositions individuelles et collectives, au Canada et à l'étranger, notamment à Winnipeg, Glasgow et Shanghai.\n\nVous trouverez ci-dessous une petite sélection de mes œuvres.",
+        "Depuis la fin de mes études en arts en 2017, je maintiens une petite pratique artistique, principalement en peinture et en dessin au fusain.\n\nJ'ai présenté mon travail dans des expositions individuelles et collectives, au Canada et à l'étranger, notamment à Winnipeg, Glasgow et Shanghai. Vous trouverez ci-dessous une petite sélection de mes œuvres.",
       link: "",
       linkLabel: "Visit website",
       linkLabelOpposite: "Voir le site web",
@@ -109,7 +113,7 @@ const projects = {
       description:
         "I co-curated and organized a series of off-site art exhibitions. The exhibitions were site-specific, which served as the inspiration for our curation and artists we asked to participate. Our goal was to treat the artworks as artifacts, inviting interpretation through the lens of the specific locations. We usually planned our exhibitions around the themes of prehistory, archaeology, forgotten science and time.\n\nWe have since retired this project in favour of our gallery, Ermitage 308.",
       descriptionOpposite:
-        "J'ai coorganisé et assuré le commissariat d'une série d'expositions d'art présentées dans différents lieux.\n\nLes expositions étaient conçues spécialement pour chaque lieu. Les espaces eux-mêmes inspiraient notre sélection des œuvres et des artistes invités.\n\nNotre objectif était de présenter les œuvres comme des artéfacts et d'inviter le public à les interpréter en relation avec les lieux où elles étaient présentées.\n\nNos expositions exploraient souvent des thèmes comme la préhistoire, l'archéologie, les sciences oubliées et le temps.\n\nNous avons depuis terminé ce projet pour nous concentrer sur notre galerie, Ermitage 308.",
+        "J'ai coorganisé et assuré le commissariat d'une série d'expositions d'art présentées dans différents lieux. Les expositions étaient conçues spécialement pour chaque lieu. Les espaces eux-mêmes inspiraient notre sélection des œuvres et des artistes invités. Notre objectif était de présenter les œuvres comme des artéfacts et d'inviter le public à les interpréter en relation avec les lieux où elles étaient présentées. Nos expositions exploraient souvent des thèmes comme la préhistoire, l'archéologie, les sciences oubliées et le temps.\n\nNous avons depuis terminé ce projet pour nous concentrer sur notre galerie, Ermitage 308.",
       link: "",
       linkLabel: "View documentation",
       linkLabelOpposite: "Voir la documentation",
@@ -120,7 +124,7 @@ const projects = {
       description:
         "Ermitage 308 is an artist-run gallery based in Montréal, QC. Through this space, we curate shows that we want to see, with a focus on our immediate artistic community in and around Montréal. Occasionally, we host events such as film nights and book launches. The project is ongoing.",
       descriptionOpposite:
-        "Ermitage 308 est une galerie gérée par des artistes à Montréal, au Québec.\n\nÀ travers cet espace, nous organisons les expositions que nous aimerions voir, avec une attention particulière à notre communauté artistique immédiate à Montréal et dans les environs.\n\nNous organisons aussi parfois d'autres événements, comme des soirées de cinéma et des lancements de livres. Le projet est toujours actif.",
+        "Ermitage 308 est une galerie gérée par des artistes à Montréal, au Québec. À travers cet espace, nous organisons les expositions que nous aimerions voir, avec une attention particulière à notre communauté artistique immédiate à Montréal et dans les environs. Nous organisons aussi parfois d'autres événements, comme des soirées de cinéma et des lancements de livres. Le projet est toujours actif.",
       link: "",
       linkLabel: "Visit website",
       linkLabelOpposite: "Voir le site web",
@@ -131,7 +135,7 @@ const projects = {
       description:
         "For the past year, I have worked as an Art Department Technician for various production designers and studios such as Studio Bonnet, Studio TB, Cloé Fortier, and Connor Olthuis. I have worked on commercial projects for various large Canadian and American clients.\n\nMy main responsibility has been to build and decorate sets to implement the production designer's concept, while learning how to balance tight deadlines, deciding when to adjust for client feedback and when to stand by the vision. As these projects move very quickly, creative problem solving is key to make sure the production flows smoothly.\n\nHere is a list of some clients and projects that I have worked on:",
       descriptionOpposite:
-        "Depuis la dernière année, je travaille comme technicien au département artistique pour différents designers de production et studios, notamment Studio Bonnet, Studio TB, Cloé Fortier et Connor Olthuis.\n\nJ'ai travaillé sur des projets publicitaires pour plusieurs grandes entreprises canadiennes et américaines.\nMa principale responsabilité est de construire et de décorer des décors afin de réaliser le concept du designer de production.\n\nCe travail m'a aussi appris à travailler avec des délais très courts, à décider quand adapter un projet selon les commentaires du client et quand conserver la direction créative originale.\n\nComme ces projets avancent très rapidement, la résolution créative de problèmes est essentielle pour assurer le bon déroulement de la production.\nVoici quelques clients et projets sur lesquels j'ai travaillé :",
+        "Depuis la dernière année, je travaille comme technicien au département artistique pour différents designers de production et studios, notamment Studio Bonnet, Studio TB, Cloé Fortier et Connor Olthuis. J'ai travaillé sur des projets publicitaires pour plusieurs grandes entreprises canadiennes et américaines.\n\nMa principale responsabilité est de construire et de décorer des décors afin de réaliser le concept du designer de production. Ce travail m'a aussi appris à travailler avec des délais très courts, à décider quand adapter un projet selon les commentaires du client et quand conserver la direction créative originale. Comme ces projets avancent très rapidement, la résolution créative de problèmes est essentielle pour assurer le bon déroulement de la production.\n\nVoici quelques clients et projets sur lesquels j'ai travaillé :",
       link: "",
       linkLabel: "Visit website",
       linkLabelOpposite: "Voir le site web",
@@ -153,7 +157,7 @@ const projects = {
       title: "Portfolio « Ette » :",
       titleOpposite: "Ette Designer Portfolio",
       description:
-        "Site portfolio pour Kate Richard, designer de mobilier et d'intérieur basée à Toronto.\n\nJ'étais le principal designer UI/UX et développeur du projet. Le site utilise GatsbyJS et le CMS Contentful.\n\nLa fonction principale du site est une galerie avec défilement infini et chargement progressif des images. Cette solution permet de présenter un grand nombre d'images tout en gardant une navigation fluide.",
+        "Site portfolio pour Kate Richard, designer de mobilier et d'intérieur basée à Toronto.\n\nJ'étais le principal designer UI/UX et développeur du projet. Le site utilise GatsbyJS et le CMS Contentful. La fonction principale du site est une galerie avec défilement infini et chargement progressif des images. Cette solution permet de présenter un grand nombre d'images tout en gardant une navigation fluide.",
       descriptionOpposite:
         "Portfolio site for Toronto-based furniture and interior designer Kate Richard.\n\nI was the primary UI/UX designer and developer. The site uses GatsbyJS and Contentful CMS. The primary feature is an infinite-scrolling, lazy-loaded gallery to handle a large volume of images with smooth performance.",
       link: "",
@@ -186,7 +190,7 @@ const projects = {
       title: "Material Matters - Université Emily Carr d'art et de design",
       titleOpposite: "Material Matters - Emily Carr University of Art and Design",
       description:
-        "Site web pour Material Matters, un projet de recherche de l'Emily Carr University of Art and Design.\n\nPour ce projet, j'ai participé au design UI/UX et j'ai développé le site avec GatsbyJS et le CMS Contentful. La page d'accueil utilise une mise en page qui peut être triée et qui contient des espaces vides placés de façon aléatoire au chargement de la page. Cela permet de casser la régularité visuelle de la mise en page.\nEn plus du développement, j'ai formé l'équipe pour qu'elle puisse gérer le contenu du site de façon autonome.\n\nLe site n'est plus actif depuis 2025, mais il est toujours possible de le consulter.",
+        "Site web pour Material Matters, un projet de recherche de l'Emily Carr University of Art and Design.\n\nPour ce projet, j'ai participé au design UI/UX et j'ai développé le site avec GatsbyJS et le CMS Contentful. La page d'accueil utilise une mise en page qui peut être triée et qui contient des espaces vides placés de façon aléatoire au chargement de la page. Cela permet de casser la régularité visuelle de la mise en page. En plus du développement, j'ai formé l'équipe pour qu'elle puisse gérer le contenu du site de façon autonome.\n\nLe site n'est plus actif depuis 2025, mais il est toujours possible de le consulter.",
       descriptionOpposite:
         "Website for Material Matters, a research initiative at Emily Carr University of Art and Design.\n\nFor this project, I consulted on the UI/UX design and developed the site with GatsbyJS and Contentful CMS. This site features a sortable homepage layout with intentional blank space, inserted randomly at page load, to break up visual conformity. Alongside development, I trained the team to manage content independently.\n\nThis website is no longer active after 2025, but still available to view.",
       link: "",
@@ -197,7 +201,7 @@ const projects = {
       title: "Pratique artistique",
       titleOpposite: "Art Practice",
       description:
-        "Depuis la fin de mes études en arts en 2017, je maintiens une petite pratique artistique, principalement en peinture et en dessin au fusain.\n\nJ'ai présenté mon travail dans des expositions individuelles et collectives, au Canada et à l'étranger, notamment à Winnipeg, Glasgow et Shanghai.\n\nVous trouverez ci-dessous une petite sélection de mes œuvres.",
+        "Depuis la fin de mes études en arts en 2017, je maintiens une petite pratique artistique, principalement en peinture et en dessin au fusain.\n\nJ'ai présenté mon travail dans des expositions individuelles et collectives, au Canada et à l'étranger, notamment à Winnipeg, Glasgow et Shanghai. Vous trouverez ci-dessous une petite sélection de mes œuvres.",
       descriptionOpposite:
         "Since graduating from art school in 2017, I maintain a small artistic practice, primarily of paintings and charcoal drawings.\n\nI have exhibited my artwork in solo and group exhibitions both locally and abroad, in places such as Winnipeg, Glasgow, and Shanghai. Below is a small selection of my artwork.",
       link: "",
@@ -208,7 +212,7 @@ const projects = {
       title: "Cofondateur, Eolith, 2022–2024",
       titleOpposite: "Co-founder, Eolith, 2022-2024",
       description:
-        "J'ai coorganisé et assuré le commissariat d'une série d'expositions d'art présentées dans différents lieux.\n\nLes expositions étaient conçues spécialement pour chaque lieu. Les espaces eux-mêmes inspiraient notre sélection des œuvres et des artistes invités.\n\nNotre objectif était de présenter les œuvres comme des artéfacts et d'inviter le public à les interpréter en relation avec les lieux où elles étaient présentées.\n\nNos expositions exploraient souvent des thèmes comme la préhistoire, l'archéologie, les sciences oubliées et le temps.\n\nNous avons depuis terminé ce projet pour nous concentrer sur notre galerie, Ermitage 308.",
+        "J'ai coorganisé et assuré le commissariat d'une série d'expositions d'art présentées dans différents lieux. Les expositions étaient conçues spécialement pour chaque lieu. Les espaces eux-mêmes inspiraient notre sélection des œuvres et des artistes invités. Notre objectif était de présenter les œuvres comme des artéfacts et d'inviter le public à les interpréter en relation avec les lieux où elles étaient présentées. Nos expositions exploraient souvent des thèmes comme la préhistoire, l'archéologie, les sciences oubliées et le temps.\n\nNous avons depuis terminé ce projet pour nous concentrer sur notre galerie, Ermitage 308.",
       descriptionOpposite:
         "I co-curated and organized a series of off-site art exhibitions. The exhibitions were site-specific, which served as the inspiration for our curation and artists we asked to participate. Our goal was to treat the artworks as artifacts, inviting interpretation through the lens of the specific locations. We usually planned our exhibitions around the themes of prehistory, archaeology, forgotten science and time.\n\nWe have since retired this project in favour of our gallery, Ermitage 308.",
       link: "",
@@ -219,7 +223,7 @@ const projects = {
       title: "Cofondateur, Ermitage 308, 2025–aujourd'hui",
       titleOpposite: "Co-founder, Ermitage 308, 2025-ongoing",
       description:
-        "Ermitage 308 est une galerie gérée par des artistes à Montréal, au Québec.\n\nÀ travers cet espace, nous organisons les expositions que nous aimerions voir, avec une attention particulière à notre communauté artistique immédiate à Montréal et dans les environs.\n\nNous organisons aussi parfois d'autres événements, comme des soirées de cinéma et des lancements de livres. Le projet est toujours actif.",
+        "Ermitage 308 est une galerie gérée par des artistes à Montréal, au Québec. À travers cet espace, nous organisons les expositions que nous aimerions voir, avec une attention particulière à notre communauté artistique immédiate à Montréal et dans les environs. Nous organisons aussi parfois d'autres événements, comme des soirées de cinéma et des lancements de livres. Le projet est toujours actif.",
       descriptionOpposite:
         "Ermitage 308 is an artist-run gallery based in Montréal, QC. Through this space, we curate shows that we want to see, with a focus on our immediate artistic community in and around Montréal. Occasionally, we host events such as film nights and book launches. The project is ongoing.",
       link: "",
@@ -230,7 +234,7 @@ const projects = {
       title: "Technicien au département artistique et installation dans l'espace",
       titleOpposite: "Art Department Technician & Spatial Installation",
       description:
-        "Depuis la dernière année, je travaille comme technicien au département artistique pour différents designers de production et studios, notamment Studio Bonnet, Studio TB, Cloé Fortier et Connor Olthuis.\n\nJ'ai travaillé sur des projets publicitaires pour plusieurs grandes entreprises canadiennes et américaines.\nMa principale responsabilité est de construire et de décorer des décors afin de réaliser le concept du designer de production.\n\nCe travail m'a aussi appris à travailler avec des délais très courts, à décider quand adapter un projet selon les commentaires du client et quand conserver la direction créative originale.\n\nComme ces projets avancent très rapidement, la résolution créative de problèmes est essentielle pour assurer le bon déroulement de la production.\nVoici quelques clients et projets sur lesquels j'ai travaillé :",
+        "Depuis la dernière année, je travaille comme technicien au département artistique pour différents designers de production et studios, notamment Studio Bonnet, Studio TB, Cloé Fortier et Connor Olthuis. J'ai travaillé sur des projets publicitaires pour plusieurs grandes entreprises canadiennes et américaines.\n\nMa principale responsabilité est de construire et de décorer des décors afin de réaliser le concept du designer de production. Ce travail m'a aussi appris à travailler avec des délais très courts, à décider quand adapter un projet selon les commentaires du client et quand conserver la direction créative originale. Comme ces projets avancent très rapidement, la résolution créative de problèmes est essentielle pour assurer le bon déroulement de la production.\n\nVoici quelques clients et projets sur lesquels j'ai travaillé :",
       descriptionOpposite:
         "For the past year, I have worked as an Art Department Technician for various production designers and studios such as Studio Bonnet, Studio TB, Cloé Fortier, and Connor Olthuis. I have worked on commercial projects for various large Canadian and American clients.\n\nMy main responsibility has been to build and decorate sets to implement the production designer's concept, while learning how to balance tight deadlines, deciding when to adjust for client feedback and when to stand by the vision. As these projects move very quickly, creative problem solving is key to make sure the production flows smoothly.\n\nHere is a list of some clients and projects that I have worked on:",
       link: "",
