@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Swiper as SwiperRoot, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination, Keyboard } from "swiper/modules";
 import type { GalleryImage } from "../lib/gallery";
 
 import "swiper/css";
@@ -57,7 +57,7 @@ const Swiper: React.FC<SwiperProps> = ({
   return (
     <>
     <SwiperRoot
-      modules={[Navigation, Pagination, Autoplay]}
+      modules={[Navigation, Pagination, Autoplay, Keyboard]}
       spaceBetween={spaceBetween}
       slidesPerView={slidesPerView}
       initialSlide={initialSlide}
@@ -67,6 +67,7 @@ const Swiper: React.FC<SwiperProps> = ({
         prevEl: ".custom-swiper-button-prev",
         disabledClass: "is-disabled",
       }}
+      keyboard={{ enabled: true }}
       className={`h-[80vh] ${className}`}
     >
       {images.map((img, i) => (
